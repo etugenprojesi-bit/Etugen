@@ -1,0 +1,448 @@
+# Crop temperature response and season length — stage 1.
+#
+# Companion to crops.yaml (same crop ids). Every value carries its source.
+# null / missing = unknown; the engine then reports "insufficient data" and
+# never guesses.
+#
+# temperature (SIMPLE crop model logic, Zhao et al. 2019):
+#   t_base  base temperature for development and growth (°C, daily mean T)
+#   t_opt   optimal temperature for biomass growth (°C, daily mean T)
+#   t_heat  daily Tmax above which heat stress starts (°C)
+#   t_ext   daily Tmax at which growth stops from heat stress (°C)
+#   t_sum   thermal time from sowing to maturity (°C·d, base t_base); from emergence
+#           when an `emergence` block is given (WOFOST fields, see below)
+#   lethal_min  lethal low temperature (°C), reported as frost risk only
+#
+# A partial block is allowed: t_base alone, or t_base + t_sum without t_opt.
+# t_opt is only stored when the source gives a growth (not development)
+# optimum; the engine needs it only when t_sum is unknown. Development cardinal
+# temperatures that are not SIMPLE growth optima go into `note`, not t_opt.
+# t_sum is only stored together with the t_base it was computed with.
+#
+# season.fao56_table11: names of FAO-56 Table 11 rows (data/fao56_table11.yaml)
+#   used for stage proportions (Kc curve) and, when t_sum is unknown, season length.
+
+version: 0.1
+sources:
+  zhao2019:
+    citation: >-
+      Zhao, C., Liu, B., Xiao, L., Hoogenboom, G., Boote, K.J., Kassie, B.T., et al.
+      (2019). A SIMPLE crop model. European Journal of Agronomy 104, 97–106. Table 1a.
+    doi: 10.1016/j.eja.2019.01.009
+    transcription: >-
+      Values taken from cropsTable_SIMPLEmodel.csv in Angourakis, A., SIMPLE-crop-model
+      NetLogo implementation v2.0 (Zenodo, doi:10.5281/zenodo.4557347, GPL-3.0), which
+      states it transcribes Table 1a. Only numeric facts are used, no code.
+    verified_against_original: false   # publisher page not reachable from our tools
+  luo2011:
+    citation: >-
+      Luo, Q. (2011). Temperature thresholds and crop production: a review.
+      Climatic Change 109, 583–598. Tables 1 and 2.
+    doi: 10.1007/s10584-011-0028-6
+    verified_against_original: true    # read from the article PDF on 2026-11-03
+  sadras2021:
+    citation: >-
+      Sadras, V.O., Rosewarne, G.M., Lake, L. (2021). Australian lentil breeding between
+      1988 and 2019 has delivered greater yield gain under stress than under high-yield
+      conditions. Frontiers in Plant Science 12, 674327. Methods p. 2; Table 1 p. 4. CC BY 4.0.
+    doi: 10.3389/fpls.2021.674327
+    verified_against_original: true    # read from the publisher PDF on 2026-11-08
+  maldaner2018:
+    citation: >-
+      Maldaner, I.C., Heldwein, A.B., Bortoluzzi, M.P., Righi, E.Z., Lucas, D.D.P.,
+      Loose, L.H., Hinnah, F.D. (2018). Base temperature and thermal time of developmental
+      subperiods in sunflower. Brazilian Journal of Agriculture (Revista de Agricultura)
+      93(3), 234-249. Table 1 p. 241, Table 2 p. 246, Eq. 11 p. 240. Open access journal.
+    doi: 10.37856/bja.v93i3.3173
+    verified_against_original: true    # read from the journal PDF on 2026-11-08
+  costa2005:
+    citation: >-
+      Costa, A.C.T. da, Geraldo, J., Pereira, M.B., Pimentel, C. (2005). Unidades térmicas
+      e produtividade em genótipos de milheto semeados em duas épocas. Pesquisa
+      Agropecuária Brasileira 40(12), 1171-1177. Methods p. 1173; Tabelas 1 and 2. CC BY-NC 4.0.
+    doi: 10.1590/S0100-204X2005001200003
+    verified_against_original: true    # read from the journal PDF and SciELO table images on 2026-11-08
+  chauhan2023:
+    citation: >-
+      Chauhan, Y.S., Anwar, M.R., Richards, M.F., Lake, L., Sadras, V.O., Luckett, D.J.,
+      Raman, R., Krosch, S., Graham, N. (2023). Effect of soil water on flowering and podset
+      in chickpea: implications for modelling and managing frost and heat stress.
+      Agronomy for Sustainable Development 43, 49. Section 2 (p. 2-3). CC BY 4.0.
+    doi: 10.1007/s13593-023-00903-x
+    verified_against_original: true    # read from the publisher PDF on 2026-11-08
+  boonsprins1993:
+    citation: >-
+      Boons-Prins, E.R., de Koning, G.H.J., van Diepen, C.A., Penning de Vries, F.W.T. (1993).
+      Crop-specific simulation parameters for yield forecasting across the European Community.
+      Simulation Reports CABO-TT 32, CABO-DLO, Wageningen. Spring barley: Appendix C1
+      (p. C I-1) and C3, Table C3b (p. C III-3). Technical report (WOFOST calibration, EU15).
+    url: https://edepot.wur.nl/308997
+    doi: null   # no DOI; WUR edepot permanent link
+    cross_check: >-
+      Same values in ajwdewit/WOFOST_crop_parameters, branch wofost72, barley.yaml
+      (EUPL-1.2), except TBASEM (0.0 there, 3.0 in the report; the report is used).
+    verified_against_original: true    # read from the report PDF on 2026-11-12
+  kaur2025:
+    citation: >-
+      Kaur, H., Kingra, P.K., Singh, L., Kaur, S., Bora, S. (2025). Phenological and yield
+      responses of wheat to sowing dates and varieties in Punjab: an agro-climatic index
+      approach. Indian Journal of Agronomy 70(4), 499-502. Table 1 p. 500 (days sowing to
+      maturity). PAU Ludhiana, rabi 2023-24, PBW 826 / PBW 766 / PBW 550.
+    doi: 10.59797/ija.v70.i4.5677
+    verified_against_original: true    # read from the journal PDF on 2026-11-14
+
+  ecocrop:
+    citation: >-
+      FAO ECOCROP database, data sheets read online on 2026-11-12
+      (https://ecocrop.apps.fao.org/ecocrop/srv/en/cropSearchForm). Values: "Temperat.
+      requir." optimal min/max and absolute min/max, "Crop cycle" min/max, killing
+      temperatures. Scoring method after the ECOCROP model in the R package dismo
+      (R. J. Hijmans, R/ecocrop.R; method described, code not used).
+    url: https://ecocrop.apps.fao.org/ecocrop/srv/en/cropSearchForm
+    doi: null
+    licence: >-
+      None stated on the site (checked 2026-11-03 and 2026-11-12). Used by user decision
+      2026-11-12 with this label; FAO has been asked about reuse
+      (docs/drafts/fao_ecocrop_licence_request.md). Remove all `ecocrop` blocks if FAO
+      objects.
+    verified_against_original: true    # read from the data sheets, scripts/probe/probe_ecocrop.py
+
+# WOFOST-style optional fields (decision K2-a, docs/drafts/plan_sicaklik_parametreleri.md):
+#   dev_rate_table  [[Tmean, daily °C·d], ...] piecewise linear, clamped at the ends (DTSMTB);
+#                   replaces max(0, Tmean - t_base) for development.
+#   emergence       {t_base: TBASEM, t_eff_max: TEFFMX, t_sum: TSUMEM}: sowing -> emergence,
+#                   daily increment min(max(0, Tmean - t_base), t_eff_max - t_base);
+#                   t_sum then counts from emergence to maturity (TSUM1 + TSUM2).
+
+# ECOCROP block (decision 2026-11-12, docs/drafts/plan_ecocrop_urun_artirma.md K1-a..K5-a):
+#   used only when the crop has no evaluable literature block (t_sum or t_opt).
+#   temp   [TMIN, TOPMN, TOPMX, TMAX] °C: absolute min, optimal min, optimal max, absolute max
+#   cycle  [min, max] days (shown only; the season length stays FAO-56 Table 11)
+#   id     ECOCROP data sheet id: https://ecocrop.apps.fao.org/ecocrop/srv/en/dataSheet?id=<id>
+
+crops:
+  winter_wheat:
+    temperature:
+      source: zhao2019
+      cultivar: Yecora Rojo   # "wheat 1"; "wheat 2" (Batten) has t_sum 2150, same temperatures
+      t_base: 0
+      t_opt: 15
+      t_heat: 34
+      t_ext: 45
+      t_sum: 2200
+      note: SIMPLE does not model vernalisation or photoperiod.
+    lethal_min: {value: -17.2, source: luo2011, note: "Table 1, Tlmin (Porter & Gawith 1999)"}
+    season: {fao56_table11: [Winter Wheat]}
+    regional:
+      # Decision 2026-11-14 (plan_punjab_bugday_sicak_esik.md, K1-a, chosen by the user).
+      - id: punjab_india
+        name: {en: "Punjab (India) wheat cultivars", tr: "Pencap (Hindistan) buğday çeşitleri"}
+        region:
+          lat: [29.5, 32.6]     # assumption: box around Indian Punjab
+          lon: [73.8, 77.0]
+          ggcmi_source: India agricultural statistics   # excludes Pakistani cells in the box
+        source: kaur2025
+        t_sum: [2482, 2639]
+        assumption: >-
+          Derived, not published: Kaur et al. (2025) Table 1 gives 154 / 146 / 136 days
+          sowing to maturity for sowings on 6 Nov / 24 Nov / 12 Dec 2023 at PAU Ludhiana
+          (mean of three PBW cultivars); the sum of daily mean temperature above 0 C over
+          those seasons from NASA POWER at the same 0.5 deg GGCMI cell is 2639 / 2564 /
+          2482 C d. One season, one site; base 0 and all other parameters as above.
+
+  spring_wheat:
+    temperature:
+      source: zhao2019
+      cultivar: Yecora Rojo
+      t_base: 0
+      t_opt: 15
+      t_heat: 34
+      t_ext: 45
+      t_sum: 2200
+    season: {fao56_table11: [Barley/Oats/Wheat]}
+    regional:
+      # Decision 2026-11-14 (plan_punjab_bugday_sicak_esik.md, K1-a, chosen by the user; the PBW cultivars
+      # are spring-habit wheats sown in November, as both GGCMI wheat calendars there).
+      - id: punjab_india
+        name: {en: "Punjab (India) wheat cultivars", tr: "Pencap (Hindistan) buğday çeşitleri"}
+        region:
+          lat: [29.5, 32.6]     # assumption: box around Indian Punjab
+          lon: [73.8, 77.0]
+          ggcmi_source: India agricultural statistics   # excludes Pakistani cells in the box
+        source: kaur2025
+        t_sum: [2482, 2639]
+        assumption: >-
+          Derived, not published: Kaur et al. (2025) Table 1 gives 154 / 146 / 136 days
+          sowing to maturity for sowings on 6 Nov / 24 Nov / 12 Dec 2023 at PAU Ludhiana
+          (mean of three PBW cultivars); the sum of daily mean temperature above 0 C over
+          those seasons from NASA POWER at the same 0.5 deg GGCMI cell is 2639 / 2564 /
+          2482 C d. One season, one site; base 0 and all other parameters as above.
+
+  barley:
+    temperature:
+      source: boonsprins1993
+      cultivar: spring barley crop type 0301 (EU15 calibration)
+      t_base: 0                  # DTSMTB starts at 0 °C (Table C3b)
+      dev_rate_table: [[0, 0], [35, 35], [45, 35]]   # DTSMTB, Table C3b
+      t_sum: 1550                # TSUM1 800 + TSUM2 750, emergence -> maturity (Table C3b)
+      emergence: {t_base: 3, t_eff_max: 30, t_sum: 110}   # TBASEM, TSUMEM (C3b); TEFFMX (C1)
+      note: >-
+        WOFOST calibration on EU spring-barley crop calendars (sowing Feb-Mar, maturity
+        Jun-Aug; Table C3a). No vernalisation, photoperiod or heat-stress thresholds in the
+        source (IDSL = 0), so hot-season sowings are not penalised; the GGCMI local calendar
+        limits the sowing windows. Winter-barley cultivars are likely longer.
+    lethal_min: {value: [-17.3, -12.9], source: luo2011, note: "Table 2, Tlmin (Prasil et al. 2007)"}
+    season: {fao56_table11: [Barley/Oats/Wheat]}
+
+  oats:
+    ecocrop: {id: 481, temp: [5, 16, 20, 30], cycle: [110, 270]}
+    lethal_min: {value: -1, source: ecocrop, note: "killing temp. early growth (frost risk only, decision K2-a)"}
+    season: {fao56_table11: [Barley/Oats/Wheat]}
+
+  maize_grain:
+    temperature: {source: zhao2019, cultivar: McCurdy 84aa, t_base: 8, t_opt: 28, t_heat: 34, t_ext: 50, t_sum: 2050}
+    season: {fao56_table11: ["Maize (grain)"]}
+
+  sorghum_grain:
+    temperature:
+      source: luo2011
+      t_base: 8
+      t_opt: 34
+      note: "Table 2, vegetative development (Alagarswamy & Ritchie 1991); no heat thresholds or t_sum."
+    season: {fao56_table11: [Sorghum]}
+
+  millet:
+    temperature:
+      source: costa2005
+      cultivar: [BRS 1501, ENA 1, Souna III, HKP, Guerguera]   # pearl millet, Seropédica RJ, Brazil
+      t_base: 10   # used by the authors, citing Norman et al. (1995); not estimated in the study
+      t_sum: [1052, 1352]
+      note: >-
+        Thermal time sowing to physiological maturity (E9), sum of (Tmean - 10).
+        Range over 5 genotypes and 2 sowing dates (Jan and Mar 2002): rainy season
+        1239-1352, dry season 1052-1123 (Tabelas 1-2; E0 at emergence already has
+        31-36 UT, so the sum starts at sowing). Shorter dry-season cycles are partly
+        photoperiod. No growth optimum or heat thresholds in the source.
+    season: {fao56_table11: [Millet]}
+
+  rice:
+    temperature: {source: zhao2019, cultivar: IR72, t_base: 9, t_opt: 26, t_heat: 34, t_ext: 50, t_sum: 2300}
+    season: {fao56_table11: [Rice]}
+
+  lentil:
+    temperature:
+      source: sadras2021
+      cultivar: 19 Australian varieties (Indianhead ... CIPAL1701)
+      t_base: 0    # used by the authors, citing Summerfield et al. (1985); not estimated in the study
+      t_sum: [1963, 2193]
+      note: >-
+        Thermal time sowing to maturity, BLUPs across eight environments in
+        south-eastern Australia (Table 1); range over the 19 varieties. No growth
+        optimum or heat thresholds in the source.
+    season: {fao56_table11: [Lentil]}
+
+  chickpea:
+    ecocrop: {id: 2479, temp: [7, 15, 29, 35], cycle: [90, 180]}
+    lethal_min: {value: 0, source: ecocrop, note: "killing temp. early growth (frost risk only, decision K2-a)"}
+    temperature:
+      source: chauhan2023
+      t_base: 0
+      note: >-
+        APSIM chickpea phenology (Robertson et al. 2002), as described in Chauhan et al.
+        2023: development cardinal temperatures base 0, optimum 30, maximum 40 °C. These
+        are development, not growth, optima, so t_opt is left empty. No sowing-to-maturity
+        thermal time; chickpea also has no FAO-56 Table 11 row.
+    season:
+      fao56_table11: [Lentil]
+      assumption: >-
+        Analogy (decision K3-a): FAO-56 Table 11 has no chickpea row; the lentil rows
+        (another cool-season grain legume) give the stage proportions and season length.
+
+  dry_bean:
+    temperature: {source: zhao2019, cultivar: Porrillo Sintetico, t_base: 5, t_opt: 27, t_heat: 32, t_ext: 45, t_sum: 2700}
+    season: {fao56_table11: ["Beans (dry)"]}
+
+  faba_bean:
+    ecocrop: {id: 2146, temp: [5, 18, 28, 32], cycle: [100, 150]}
+    season: {fao56_table11: ["Faba bean, broad bean", "Faba bean, broad bean - dry"]}
+
+  dry_pea:
+    ecocrop: {id: 1721, temp: [4, 10, 24, 30], cycle: [60, 140]}
+    lethal_min: {value: 0, source: ecocrop, note: "killing temp. early growth (frost risk only, decision K2-a)"}
+    season: {fao56_table11: [Peas]}
+
+  soybean:
+    temperature:
+      source: zhao2019
+      cultivar: [Bragg, Willams82]
+      t_base: 6
+      t_opt: 27
+      t_heat: 36
+      t_ext: 50
+      t_sum: [2350, 2500]
+    season: {fao56_table11: [Soybeans]}
+
+  groundnut:
+    temperature: {source: zhao2019, cultivar: FLORUNNER, t_base: 10, t_opt: 28, t_heat: 36, t_ext: 50, t_sum: 3100}
+    season: {fao56_table11: [Groundnut]}
+
+  cowpea:
+    ecocrop: {id: 2153, temp: [15, 25, 35, 40], cycle: [30, 240]}
+    lethal_min: {value: -1, source: ecocrop, note: "killing temp. early growth (frost risk only, decision K2-a)"}
+    season: {fao56_table11: ["Green gram, cowpeas"]}
+
+  sunflower:
+    temperature:
+      source: maldaner2018
+      cultivar: Hélio 358   # Santa Maria RS, Brazil, sowings 2007/08-2009/10
+      t_base: 5.8   # mean Tb of emergence - beginning of anthesis (Table 1)
+      t_sum: 1761   # sowing - physiological maturity, method 1 = sum(Tmean - Tb) (Table 2)
+      note: >-
+        Of the three genotypes, Hélio 358 has the Tb closest to the three-genotype mean.
+        Others (same table, same method): Aguará 03 Tb 3.9 / 1976 °C·d, Embrapa 122
+        Tb 9.7 / 1269 °C·d. The authors use Topt 27 and Tmax 34 °C (citing Fagundes et
+        al. 2007) only for their capped method 3; these are development values, not
+        stored as t_opt.
+    season: {fao56_table11: [Sunflower]}
+
+  safflower:
+    ecocrop: {id: 2514, temp: [5, 20, 32, 45], cycle: [120, 245]}
+    lethal_min: {value: -2, source: ecocrop, note: "killing temp. early growth (frost risk only, decision K2-a)"}
+    season: {fao56_table11: [Safflower]}
+
+  sesame:
+    ecocrop: {id: 1937, temp: [10, 20, 30, 40], cycle: [40, 180]}
+    season: {fao56_table11: [Sesame]}
+
+  flax:
+    ecocrop: {id: 7336, temp: [5, 16, 24, 30], cycle: [80, 180]}
+    lethal_min: {value: -1, source: ecocrop, note: "killing temp. early growth (frost risk only, decision K2-a)"}
+    season: {fao56_table11: [Flax]}
+
+  cotton:
+    temperature: {source: zhao2019, cultivar: Deltapine77, t_base: 11, t_opt: 28, t_heat: 35, t_ext: 50, t_sum: 4600}
+    season: {fao56_table11: [Cotton]}
+
+  potato:
+    temperature:
+      source: zhao2019
+      cultivar: [Sebago, Desiree, Zibaihua, Jinguan, Russet Burbank, Hilite Russet]
+      t_base: 4
+      t_opt: 22
+      t_heat: 34
+      t_ext: 45
+      t_sum: [2300, 2700]   # range over the six cultivars
+    season: {fao56_table11: [Potato]}
+
+  sweet_potato:
+    ecocrop: {id: 1265, temp: [10, 18, 28, 38], cycle: [80, 170]}
+    lethal_min: {value: 5, source: ecocrop, note: "killing temp. early growth (frost risk only, decision K2-a)"}
+    season: {fao56_table11: [Sweet potato]}
+
+  cassava:
+    temperature: {source: zhao2019, cultivar: Mcol-1684, t_base: 12, t_opt: 28, t_heat: 38, t_ext: 50, t_sum: 5400}
+    season: {fao56_table11: ["Cassava: year 1"]}
+
+  sugar_beet:
+    ecocrop: {id: 514, temp: [4, 15, 25, 35], cycle: [160, 240]}
+    lethal_min: {value: 0, source: ecocrop, note: "killing temp. early growth (frost risk only, decision K2-a)"}
+    season: {fao56_table11: [Sugarbeet]}
+
+  sudan_grass:
+    # ECOCROP sheet of Sorghum x drummondii (the species in crops.yaml); the
+    # Sorghum sudanense sheet 1988 is empty. Added 2026-11-14 (plan_veri_eksik_urunler.md).
+    ecocrop: {id: 9970, temp: [12, 21, 33, 38], cycle: [90, 120]}
+    lethal_min: {value: -1, source: ecocrop, note: "killing temp. early growth (frost risk only, decision K2-a)"}
+    season:
+      fao56_table11: ["Sudan, 1^st cutting cycle"]
+      first_cut_only: true   # not used in recommended rotations (decision K3)
+      assumption: >-
+        Only the first cutting cycle (FAO-56 Table 11, sowing to first cut) is modelled as the
+        season; later cuts (regrowth) are not (decision K1, plan_veri_eksik_urunler.md).
+
+  berseem_clover:
+    # Added 2026-11-14 (plan_veri_eksik_urunler.md, decision K2).
+    ecocrop: {id: 10522, temp: [3, 16, 27, 35], cycle: [90, 270]}
+    lethal_min: {value: -2, source: ecocrop, note: "killing temp. early growth (frost risk only, decision K2-a)"}
+    season:
+      fao56_table11: ["Alfalfa 1^st cutting cycle"]
+      first_cut_only: true   # not used in recommended rotations (decision K3)
+      assumption: >-
+        Analogy (decision K2): FAO-56 Table 11 has no berseem row; the first cutting cycle of
+        alfalfa (another forage legume cut for hay, Fabaceae; FAO-56 Table 12 lists both with
+        "averaged cutting effects") gives the stage proportions and season length. Only the
+        first cut is modelled; later cuts are not.
+
+  cereal_rye:
+    ecocrop: {id: 1929, temp: [3, 15, 20, 31], cycle: [110, 270]}
+    lethal_min: {value: -1, source: ecocrop, note: "killing temp. early growth (frost risk only, decision K2-a)"}
+    season:
+      fao56_table11: [Barley/Oats/Wheat]
+      assumption: >-
+        Analogy (decision K3-a): no FAO-56 Table 11 row for rye; the small-grain row of
+        barley, oats and wheat is used. Kc from barley, see crops.yaml `fao56_analog`.
+
+  # ------------------------------------------------ vegetables (added 2026-11-13, ECOCROP only)
+  tomato:
+    ecocrop: {id: 1379, temp: [7, 20, 27, 35], cycle: [70, 150]}
+    season: {fao56_table11: [Tomato]}
+
+  onion:
+    ecocrop: {id: 364, temp: [4, 12, 25, 30], cycle: [85, 175]}
+    season: {fao56_table11: [Onion (dry)]}
+
+  cabbage:
+    ecocrop: {id: 554, temp: [7, 15, 24, 32], cycle: [60, 200]}
+    lethal_min: {value: -1, source: ecocrop, note: "killing temp. early growth (frost risk only, decision K2-a)"}
+    season: {fao56_table11: [Cabbage]}
+
+  carrot:
+    ecocrop: {id: 871, temp: [3, 15, 24, 30], cycle: [40, 150]}
+    lethal_min: {value: 0, source: ecocrop, note: "killing temp. early growth (frost risk only, decision K2-a)"}
+    season: {fao56_table11: [Carrots]}
+
+  cucumber:
+    ecocrop: {id: 817, temp: [6, 18, 32, 38], cycle: [40, 180]}
+    season: {fao56_table11: [Cucumber]}
+
+  watermelon:
+    ecocrop: {id: 708, temp: [15, 20, 35, 40]}  # cycle shown as 0-0 on the sheet
+    season: {fao56_table11: [Water melons]}
+
+  melon:
+    ecocrop: {id: 815, temp: [9, 18, 30, 35], cycle: [50, 120]}
+    season: {fao56_table11: [Sweet melons]}
+
+  sweet_pepper:
+    ecocrop: {id: 618, temp: [8, 17, 30, 35], cycle: [60, 180]}
+    season: {fao56_table11: [Sweet peppers (bell)]}
+
+  eggplant:
+    ecocrop: {id: 1965, temp: [9, 20, 35, 40], cycle: [70, 120]}
+    season: {fao56_table11: [Egg plant]}
+
+  lettuce:
+    ecocrop: {id: 1313, temp: [5, 12, 21, 30], cycle: [35, 85]}
+    lethal_min: {value: 0, source: ecocrop, note: "killing temp. early growth (frost risk only, decision K2-a)"}
+    season: {fao56_table11: [Lettuce]}
+
+  spinach:
+    ecocrop: {id: 1997, temp: [2, 13, 20, 27], cycle: [40, 120]}
+    lethal_min: {value: 0, source: ecocrop, note: "killing temp. early growth (frost risk only, decision K2-a)"}
+    season: {fao56_table11: [Spinach]}
+
+  pumpkin:
+    ecocrop: {id: 819, temp: [9, 20, 30, 38], cycle: [80, 140]}
+    season: {fao56_table11: ['Pumpkin, Winter squash']}
+
+  radish:
+    ecocrop: {id: 1839, temp: [10, 12, 26, 37], cycle: [50, 80]}
+    season: {fao56_table11: [Radish]}
+
+  green_bean:
+    ecocrop: {id: 1668, temp: [7, 16, 25, 32], cycle: [50, 270]}
+    season: {fao56_table11: [Beans (green)]}
+
+  mung_bean:
+    ecocrop: {id: 2150, temp: [8, 21, 36, 40], cycle: [50, 120]}
+    season: {fao56_table11: ['Green gram, cowpeas']}

@@ -1,0 +1,7 @@
+# Dependencies for scripts/probe/ (stage 0). The full backend stack is added in stage 1.
+httpx==0.28.1
+PyYAML==6.0.3
+earthengine-api==1.7.51
+numpy==2.5.4
+tifffile==2026.10.15
+h5py==3.16.0  # one-off conversion of the GGCMI crop calendar (scripts/build_crop_calendar.py)

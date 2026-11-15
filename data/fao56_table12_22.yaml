@@ -1,0 +1,1788 @@
+source:
+  citation: Allen, R.G., Pereira, L.S., Raes, D., Smith, M. (1998). FAO Irrigation and Drainage Paper 56. Table
+    12 (single crop coefficients, max crop height) and Table 22 (max root depth, depletion fraction p for ETc ~5
+    mm/day).
+  url_table12: https://www.fao.org/4/X0490E/x0490e0b.htm
+  url_table22: https://www.fao.org/4/X0490E/x0490e0e.htm
+  generated_by: scripts/extract_fao56_table12_22.py
+table12:
+- group: a. Small Vegetables
+  crop: Broccoli
+  kc_ini: 0.7
+  kc_ini_from_group: true
+  kc_mid: 1.05
+  kc_end: 0.95
+  max_height_m: 0.3
+  raw: ' | 1.05 | 0.95 | 0.3'
+- group: a. Small Vegetables
+  crop: Brussel Sprouts
+  kc_ini: 0.7
+  kc_ini_from_group: true
+  kc_mid: 1.05
+  kc_end: 0.95
+  max_height_m: 0.4
+  raw: ' | 1.05 | 0.95 | 0.4'
+- group: a. Small Vegetables
+  crop: Cabbage
+  kc_ini: 0.7
+  kc_ini_from_group: true
+  kc_mid: 1.05
+  kc_end: 0.95
+  max_height_m: 0.4
+  raw: ' | 1.05 | 0.95 | 0.4'
+- group: a. Small Vegetables
+  crop: Carrots
+  kc_ini: 0.7
+  kc_ini_from_group: true
+  kc_mid: 1.05
+  kc_end: 0.95
+  max_height_m: 0.3
+  raw: ' | 1.05 | 0.95 | 0.3'
+- group: a. Small Vegetables
+  crop: Cauliflower
+  kc_ini: 0.7
+  kc_ini_from_group: true
+  kc_mid: 1.05
+  kc_end: 0.95
+  max_height_m: 0.4
+  raw: ' | 1.05 | 0.95 | 0.4'
+- group: a. Small Vegetables
+  crop: Celery
+  kc_ini: 0.7
+  kc_ini_from_group: true
+  kc_mid: 1.05
+  kc_end: 1.0
+  max_height_m: 0.6
+  raw: ' | 1.05 | 1.00 | 0.6'
+- group: a. Small Vegetables
+  crop: Garlic
+  kc_ini: 0.7
+  kc_ini_from_group: true
+  kc_mid: 1.0
+  kc_end: 0.7
+  max_height_m: 0.3
+  raw: ' | 1.00 | 0.70 | 0.3'
+- group: a. Small Vegetables
+  crop: Lettuce
+  kc_ini: 0.7
+  kc_ini_from_group: true
+  kc_mid: 1.0
+  kc_end: 0.95
+  max_height_m: 0.3
+  raw: ' | 1.00 | 0.95 | 0.3'
+- group: a. Small Vegetables
+  crop: Onions - dry
+  kc_ini: 0.7
+  kc_ini_from_group: true
+  kc_mid: 1.05
+  kc_end: 0.75
+  max_height_m: 0.4
+  raw: ' | 1.05 | 0.75 | 0.4'
+- group: a. Small Vegetables
+  crop: Onions - green
+  kc_ini: 0.7
+  kc_ini_from_group: true
+  kc_mid: 1.0
+  kc_end: 1.0
+  max_height_m: 0.3
+  raw: ' | 1.00 | 1.00 | 0.3'
+- group: a. Small Vegetables
+  crop: Onions - seed
+  kc_ini: 0.7
+  kc_ini_from_group: true
+  kc_mid: 1.05
+  kc_end: 0.8
+  max_height_m: 0.5
+  raw: ' | 1.05 | 0.80 | 0.5'
+- group: a. Small Vegetables
+  crop: Spinach
+  kc_ini: 0.7
+  kc_ini_from_group: true
+  kc_mid: 1.0
+  kc_end: 0.95
+  max_height_m: 0.3
+  raw: ' | 1.00 | 0.95 | 0.3'
+- group: a. Small Vegetables
+  crop: Radish
+  kc_ini: 0.7
+  kc_ini_from_group: true
+  kc_mid: 0.9
+  kc_end: 0.85
+  max_height_m: 0.3
+  raw: ' | 0.90 | 0.85 | 0.3'
+- group: b. Vegetables - Solanum Family (Solanaceae)
+  crop: Egg Plant
+  kc_ini: 0.6
+  kc_ini_from_group: true
+  kc_mid: 1.05
+  kc_end: 0.9
+  max_height_m: 0.8
+  raw: ' | 1.05 | 0.90 | 0.8'
+- group: b. Vegetables - Solanum Family (Solanaceae)
+  crop: Sweet Peppers (bell)
+  kc_ini: 0.6
+  kc_ini_from_group: true
+  kc_mid: 1.05
+  kc_end: 0.9
+  max_height_m: 0.7
+  raw: ' | 1.05^2 | 0.90 | 0.7'
+- group: b. Vegetables - Solanum Family (Solanaceae)
+  crop: Tomato
+  kc_ini: 0.6
+  kc_ini_from_group: true
+  kc_mid: 1.15
+  kc_end:
+  - 0.7
+  - 0.9
+  max_height_m: 0.6
+  raw: ' | 1.15^2 | 0.70-0.90 | 0.6'
+- group: c. Vegetables - Cucumber Family (Cucurbitaceae)
+  crop: Cantaloupe
+  kc_ini: 0.5
+  kc_ini_from_group: false
+  kc_mid: 0.85
+  kc_end: 0.6
+  max_height_m: 0.3
+  raw: 0.5 | 0.85 | 0.60 | 0.3
+- group: c. Vegetables - Cucumber Family (Cucurbitaceae)
+  crop: Cucumber - Fresh Market
+  kc_ini: 0.6
+  kc_ini_from_group: false
+  kc_mid: 1.0
+  kc_end: 0.75
+  max_height_m: 0.3
+  raw: 0.6 | 1.00^2 | 0.75 | 0.3
+- group: c. Vegetables - Cucumber Family (Cucurbitaceae)
+  crop: Cucumber - Machine harvest
+  kc_ini: 0.5
+  kc_ini_from_group: false
+  kc_mid: 1.0
+  kc_end: 0.9
+  max_height_m: 0.3
+  raw: 0.5 | 1.00 | 0.90 | 0.3
+- group: c. Vegetables - Cucumber Family (Cucurbitaceae)
+  crop: Pumpkin, Winter Squash
+  kc_ini: 0.5
+  kc_ini_from_group: true
+  kc_mid: 1.0
+  kc_end: 0.8
+  max_height_m: 0.4
+  raw: ' | 1.00 | 0.80 | 0.4'
+- group: c. Vegetables - Cucumber Family (Cucurbitaceae)
+  crop: Squash, Zucchini
+  kc_ini: 0.5
+  kc_ini_from_group: true
+  kc_mid: 0.95
+  kc_end: 0.75
+  max_height_m: 0.3
+  raw: ' | 0.95 | 0.75 | 0.3'
+- group: c. Vegetables - Cucumber Family (Cucurbitaceae)
+  crop: Sweet Melons
+  kc_ini: 0.5
+  kc_ini_from_group: true
+  kc_mid: 1.05
+  kc_end: 0.75
+  max_height_m: 0.4
+  raw: ' | 1.05 | 0.75 | 0.4'
+- group: c. Vegetables - Cucumber Family (Cucurbitaceae)
+  crop: Watermelon
+  kc_ini: 0.4
+  kc_ini_from_group: false
+  kc_mid: 1.0
+  kc_end: 0.75
+  max_height_m: 0.4
+  raw: 0.4 | 1.00 | 0.75 | 0.4
+- group: d. Roots and Tubers
+  crop: Beets, table
+  kc_ini: 0.5
+  kc_ini_from_group: true
+  kc_mid: 1.05
+  kc_end: 0.95
+  max_height_m: 0.4
+  raw: ' | 1.05 | 0.95 | 0.4'
+- group: d. Roots and Tubers
+  crop: Cassava - year 1
+  kc_ini: 0.3
+  kc_ini_from_group: false
+  kc_mid: 0.8
+  kc_end: 0.3
+  max_height_m: 1.0
+  raw: 0.3 | 0.80^3 | 0.30 | 1.0
+- group: d. Roots and Tubers
+  crop: Cassava - year 2
+  kc_ini: 0.3
+  kc_ini_from_group: false
+  kc_mid: 1.1
+  kc_end: 0.5
+  max_height_m: 1.5
+  raw: 0.3 | 1.10 | 0.50 | 1.5
+- group: d. Roots and Tubers
+  crop: Parsnip
+  kc_ini: 0.5
+  kc_ini_from_group: false
+  kc_mid: 1.05
+  kc_end: 0.95
+  max_height_m: 0.4
+  raw: 0.5 | 1.05 | 0.95 | 0.4
+- group: d. Roots and Tubers
+  crop: Potato
+  kc_ini: 0.5
+  kc_ini_from_group: true
+  kc_mid: 1.15
+  kc_end: 0.75
+  max_height_m: 0.6
+  raw: ' | 1.15 | 0.75^4 | 0.6'
+- group: d. Roots and Tubers
+  crop: Sweet Potato
+  kc_ini: 0.5
+  kc_ini_from_group: true
+  kc_mid: 1.15
+  kc_end: 0.65
+  max_height_m: 0.4
+  raw: ' | 1.15 | 0.65 | 0.4'
+- group: d. Roots and Tubers
+  crop: Turnip (and Rutabaga)
+  kc_ini: 0.5
+  kc_ini_from_group: true
+  kc_mid: 1.1
+  kc_end: 0.95
+  max_height_m: 0.6
+  raw: ' | 1.10 | 0.95 | 0.6'
+- group: d. Roots and Tubers
+  crop: Sugar Beet
+  kc_ini: 0.35
+  kc_ini_from_group: false
+  kc_mid: 1.2
+  kc_end: 0.7
+  max_height_m: 0.5
+  raw: 0.35 | 1.20 | 0.70^5 | 0.5
+- group: e. Legumes (Leguminosae)
+  crop: Beans, green
+  kc_ini: 0.5
+  kc_ini_from_group: false
+  kc_mid: 1.05
+  kc_end: 0.9
+  max_height_m: 0.4
+  raw: 0.5 | 1.05^2 | 0.90 | 0.4
+- group: e. Legumes (Leguminosae)
+  crop: Beans, dry and Pulses
+  kc_ini: 0.4
+  kc_ini_from_group: false
+  kc_mid: 1.15
+  kc_end: 0.35
+  max_height_m: 0.4
+  raw: 0.4 | 1.15^2 | 0.35 | 0.4
+- group: e. Legumes (Leguminosae)
+  crop: Chick pea
+  kc_ini: 0.4
+  kc_ini_from_group: true
+  kc_mid: 1.0
+  kc_end: 0.35
+  max_height_m: 0.4
+  raw: ' | 1.00 | 0.35 | 0.4'
+- group: e. Legumes (Leguminosae)
+  crop: Fababean (broad bean) - Fresh
+  kc_ini: 0.5
+  kc_ini_from_group: false
+  kc_mid: 1.15
+  kc_end: 1.1
+  max_height_m: 0.8
+  raw: 0.5 | 1.15^2 | 1.10 | 0.8
+- group: e. Legumes (Leguminosae)
+  crop: Fababean (broad bean) - Dry/Seed
+  kc_ini: 0.5
+  kc_ini_from_group: false
+  kc_mid: 1.15
+  kc_end: 0.3
+  max_height_m: 0.8
+  raw: 0.5 | 1.15^2 | 0.30 | 0.8
+- group: e. Legumes (Leguminosae)
+  crop: Grabanzo
+  kc_ini: 0.4
+  kc_ini_from_group: false
+  kc_mid: 1.15
+  kc_end: 0.35
+  max_height_m: 0.8
+  raw: 0.4 | 1.15 | 0.35 | 0.8
+- group: e. Legumes (Leguminosae)
+  crop: Green Gram and Cowpeas
+  kc_ini: 0.4
+  kc_ini_from_group: true
+  kc_mid: 1.05
+  kc_end:
+  - 0.35
+  - 0.6
+  max_height_m: 0.4
+  raw: ' | 1.05 | 0.60-0.35^6 | 0.4'
+- group: e. Legumes (Leguminosae)
+  crop: Groundnut (Peanut)
+  kc_ini: 0.4
+  kc_ini_from_group: true
+  kc_mid: 1.15
+  kc_end: 0.6
+  max_height_m: 0.4
+  raw: ' | 1.15 | 0.60 | 0.4'
+- group: e. Legumes (Leguminosae)
+  crop: Lentil
+  kc_ini: 0.4
+  kc_ini_from_group: true
+  kc_mid: 1.1
+  kc_end: 0.3
+  max_height_m: 0.5
+  raw: ' | 1.10 | 0.30 | 0.5'
+- group: e. Legumes (Leguminosae)
+  crop: Peas - Fresh
+  kc_ini: 0.5
+  kc_ini_from_group: false
+  kc_mid: 1.15
+  kc_end: 1.1
+  max_height_m: 0.5
+  raw: 0.5 | 1.15^2 | 1.10 | 0.5
+- group: e. Legumes (Leguminosae)
+  crop: Peas - Dry/Seed
+  kc_ini: 0.4
+  kc_ini_from_group: true
+  kc_mid: 1.15
+  kc_end: 0.3
+  max_height_m: 0.5
+  raw: ' | 1.15 | 0.30 | 0.5'
+- group: e. Legumes (Leguminosae)
+  crop: Soybeans
+  kc_ini: 0.4
+  kc_ini_from_group: true
+  kc_mid: 1.15
+  kc_end: 0.5
+  max_height_m:
+  - 0.5
+  - 1.0
+  raw: ' | 1.15 | 0.50 | 0.5-1.0'
+- group: f. Perennial Vegetables (with winter dormancy and initially bare or mulched soil)
+  crop: Artichokes
+  kc_ini: 0.5
+  kc_ini_from_group: false
+  kc_mid: 1.0
+  kc_end: 0.95
+  max_height_m: 0.7
+  raw: 0.5 | 1.00 | 0.95 | 0.7
+- group: f. Perennial Vegetables (with winter dormancy and initially bare or mulched soil)
+  crop: Asparagus
+  kc_ini: 0.5
+  kc_ini_from_group: false
+  kc_mid: 0.95
+  kc_end: 0.3
+  max_height_m:
+  - 0.2
+  - 0.8
+  raw: 0.5 | 0.95^7 | 0.30 | 0.2-0.8
+- group: f. Perennial Vegetables (with winter dormancy and initially bare or mulched soil)
+  crop: Mint
+  kc_ini: 0.6
+  kc_ini_from_group: false
+  kc_mid: 1.15
+  kc_end: 1.1
+  max_height_m:
+  - 0.6
+  - 0.8
+  raw: 0.60 | 1.15 | 1.10 | 0.6-0.8
+- group: f. Perennial Vegetables (with winter dormancy and initially bare or mulched soil)
+  crop: Strawberries
+  kc_ini: 0.4
+  kc_ini_from_group: false
+  kc_mid: 0.85
+  kc_end: 0.75
+  max_height_m: 0.2
+  raw: 0.40 | 0.85 | 0.75 | 0.2
+- group: g. Fibre Crops
+  crop: Cotton
+  kc_ini: 0.35
+  kc_ini_from_group: true
+  kc_mid:
+  - 1.15
+  - 1.2
+  kc_end:
+  - 0.5
+  - 0.7
+  max_height_m:
+  - 1.2
+  - 1.5
+  raw: ' | 1.15-1.20 | 0.70-0.50 | 1.2-1.5'
+- group: g. Fibre Crops
+  crop: Flax
+  kc_ini: 0.35
+  kc_ini_from_group: true
+  kc_mid: 1.1
+  kc_end: 0.25
+  max_height_m: 1.2
+  raw: ' | 1.10 | 0.25 | 1.2'
+- group: g. Fibre Crops
+  crop: Sisal ^8
+  kc_ini: 0.35
+  kc_ini_from_group: true
+  kc_mid:
+  - 0.4
+  - 0.7
+  kc_end:
+  - 0.4
+  - 0.7
+  max_height_m: 1.5
+  raw: ' | 0.4-0.7 | 0.4-0.7 | 1.5'
+- group: h. Oil Crops
+  crop: Castorbean (Ricinus)
+  kc_ini: 0.35
+  kc_ini_from_group: true
+  kc_mid: 1.15
+  kc_end: 0.55
+  max_height_m: 0.3
+  raw: ' | 1.15 | 0.55 | 0.3'
+- group: h. Oil Crops
+  crop: Rapeseed, Canola
+  kc_ini: 0.35
+  kc_ini_from_group: true
+  kc_mid:
+  - 1.0
+  - 1.15
+  kc_end: 0.35
+  max_height_m: 0.6
+  raw: ' | 1.0-1.15^9 | 0.35 | 0.6'
+- group: h. Oil Crops
+  crop: Safflower
+  kc_ini: 0.35
+  kc_ini_from_group: true
+  kc_mid:
+  - 1.0
+  - 1.15
+  kc_end: 0.25
+  max_height_m: 0.8
+  raw: ' | 1.0-1.15^9 | 0.25 | 0.8'
+- group: h. Oil Crops
+  crop: Sesame
+  kc_ini: 0.35
+  kc_ini_from_group: true
+  kc_mid: 1.1
+  kc_end: 0.25
+  max_height_m: 1.0
+  raw: ' | 1.10 | 0.25 | 1.0'
+- group: h. Oil Crops
+  crop: Sunflower
+  kc_ini: 0.35
+  kc_ini_from_group: true
+  kc_mid:
+  - 1.0
+  - 1.15
+  kc_end: 0.35
+  max_height_m: 2.0
+  raw: ' | 1.0-1.15^9 | 0.35 | 2.0'
+- group: i. Cereals
+  crop: Barley
+  kc_ini: 0.3
+  kc_ini_from_group: true
+  kc_mid: 1.15
+  kc_end: 0.25
+  max_height_m: 1.0
+  raw: ' | 1.15 | 0.25 | 1'
+- group: i. Cereals
+  crop: Oats
+  kc_ini: 0.3
+  kc_ini_from_group: true
+  kc_mid: 1.15
+  kc_end: 0.25
+  max_height_m: 1.0
+  raw: ' | 1.15 | 0.25 | 1'
+- group: i. Cereals
+  crop: Spring Wheat
+  kc_ini: 0.3
+  kc_ini_from_group: true
+  kc_mid: 1.15
+  kc_end:
+  - 0.25
+  - 0.4
+  max_height_m: 1.0
+  raw: ' | 1.15 | 0.25-0.4^10 | 1'
+- group: i. Cereals
+  crop: Winter Wheat - with frozen soils
+  kc_ini: 0.4
+  kc_ini_from_group: false
+  kc_mid: 1.15
+  kc_end:
+  - 0.25
+  - 0.4
+  max_height_m: 1.0
+  raw: 0.4 | 1.15 | 0.25-0.4^10 | 1
+- group: i. Cereals
+  crop: Winter Wheat - with non-frozen soils
+  kc_ini: 0.7
+  kc_ini_from_group: false
+  kc_mid: 1.15
+  kc_end:
+  - 0.25
+  - 0.4
+  max_height_m: null
+  raw: '0.7 | 1.15 | 0.25-0.4^10 | '
+- group: i. Cereals
+  crop: Maize, Field (grain) (field corn)
+  kc_ini: 0.3
+  kc_ini_from_group: true
+  kc_mid: 1.2
+  kc_end:
+  - 0.35
+  - 0.6
+  max_height_m: 2.0
+  raw: ' | 1.20 | 0.60-0.35^11 | 2'
+- group: i. Cereals
+  crop: Maize, Sweet (sweet corn)
+  kc_ini: 0.3
+  kc_ini_from_group: true
+  kc_mid: 1.15
+  kc_end: 1.05
+  max_height_m: 1.5
+  raw: ' | 1.15 | 1.05^12 | 1.5'
+- group: i. Cereals
+  crop: Millet
+  kc_ini: 0.3
+  kc_ini_from_group: true
+  kc_mid: 1.0
+  kc_end: 0.3
+  max_height_m: 1.5
+  raw: ' | 1.00 | 0.30 | 1.5'
+- group: i. Cereals
+  crop: Sorghum - grain
+  kc_ini: 0.3
+  kc_ini_from_group: true
+  kc_mid:
+  - 1.0
+  - 1.1
+  kc_end: 0.55
+  max_height_m:
+  - 1.0
+  - 2.0
+  raw: ' | 1.00-1.10 | 0.55 | 1-2'
+- group: i. Cereals
+  crop: Sorghum - sweet
+  kc_ini: 0.3
+  kc_ini_from_group: true
+  kc_mid: 1.2
+  kc_end: 1.05
+  max_height_m:
+  - 2.0
+  - 4.0
+  raw: ' | 1.20 | 1.05 | 2-4'
+- group: i. Cereals
+  crop: Rice
+  kc_ini: 1.05
+  kc_ini_from_group: false
+  kc_mid: 1.2
+  kc_end:
+  - 0.6
+  - 0.9
+  max_height_m: 1.0
+  raw: 1.05 | 1.20 | 0.90-0.60 | 1
+- group: j. Forages
+  crop: Alfalfa Hay - averaged cutting effects
+  kc_ini: 0.4
+  kc_ini_from_group: false
+  kc_mid: 0.95
+  kc_end: 0.9
+  max_height_m: 0.7
+  raw: 0.40 | 0.95^13 | 0.90 | 0.7
+- group: j. Forages
+  crop: Alfalfa Hay - individual cutting periods
+  kc_ini: 0.4
+  kc_ini_from_group: false
+  kc_mid: 1.2
+  kc_end: 1.15
+  max_height_m: 0.7
+  raw: 0.40^14 | 1.20^14 | 1.15^14 | 0.7
+- group: j. Forages
+  crop: Alfalfa Hay - for seed
+  kc_ini: 0.4
+  kc_ini_from_group: false
+  kc_mid: 0.5
+  kc_end: 0.5
+  max_height_m: 0.7
+  raw: 0.40 | 0.50 | 0.50 | 0.7
+- group: j. Forages
+  crop: Bermuda hay - averaged cutting effects
+  kc_ini: 0.55
+  kc_ini_from_group: false
+  kc_mid: 1.0
+  kc_end: 0.85
+  max_height_m: 0.35
+  raw: 0.55 | 1.00^13 | 0.85 | 0.35
+- group: j. Forages
+  crop: Bermuda hay - Spring crop for seed
+  kc_ini: 0.35
+  kc_ini_from_group: false
+  kc_mid: 0.9
+  kc_end: 0.65
+  max_height_m: 0.4
+  raw: 0.35 | 0.90 | 0.65 | 0.4
+- group: j. Forages
+  crop: Clover hay, Berseem - averaged cutting effects
+  kc_ini: 0.4
+  kc_ini_from_group: false
+  kc_mid: 0.9
+  kc_end: 0.85
+  max_height_m: 0.6
+  raw: 0.40 | 0.90^13 | 0.85 | 0.6
+- group: j. Forages
+  crop: Clover hay, Berseem - individual cutting periods
+  kc_ini: 0.4
+  kc_ini_from_group: false
+  kc_mid: 1.15
+  kc_end: 1.1
+  max_height_m: 0.6
+  raw: 0.40^14 | 1.15^14 | 1.10^14 | 0.6
+- group: j. Forages
+  crop: Rye Grass hay - averaged cutting effects
+  kc_ini: 0.95
+  kc_ini_from_group: false
+  kc_mid: 1.05
+  kc_end: 1.0
+  max_height_m: 0.3
+  raw: 0.95 | 1.05 | 1.00 | 0.3
+- group: j. Forages
+  crop: Sudan Grass hay (annual) - averaged cutting effects
+  kc_ini: 0.5
+  kc_ini_from_group: false
+  kc_mid: 0.9
+  kc_end: 0.85
+  max_height_m: 1.2
+  raw: 0.50 | 0.90^14 | 0.85 | 1.2
+- group: j. Forages
+  crop: Sudan Grass hay (annual) - individual cutting periods
+  kc_ini: 0.5
+  kc_ini_from_group: false
+  kc_mid: 1.15
+  kc_end: 1.1
+  max_height_m: 1.2
+  raw: 0.50^14 | 1.15^14 | 1.10^14 | 1.2
+- group: j. Forages
+  crop: Grazing Pasture - Rotated Grazing
+  kc_ini: 0.4
+  kc_ini_from_group: false
+  kc_mid:
+  - 0.85
+  - 1.05
+  kc_end: 0.85
+  max_height_m:
+  - 0.15
+  - 0.3
+  raw: 0.40 | 0.85-1.05 | 0.85 | 0.15-0.30
+- group: j. Forages
+  crop: Grazing Pasture - Extensive Grazing
+  kc_ini: 0.3
+  kc_ini_from_group: false
+  kc_mid: 0.75
+  kc_end: 0.75
+  max_height_m: 0.1
+  raw: 0.30 | 0.75 | 0.75 | 0.10
+- group: j. Forages
+  crop: Turf grass - cool season ^15
+  kc_ini: 0.9
+  kc_ini_from_group: false
+  kc_mid: 0.95
+  kc_end: 0.95
+  max_height_m: 0.1
+  raw: 0.90 | 0.95 | 0.95 | 0.10
+- group: j. Forages
+  crop: Turf grass - warm season ^15
+  kc_ini: 0.8
+  kc_ini_from_group: false
+  kc_mid: 0.85
+  kc_end: 0.85
+  max_height_m: 0.1
+  raw: 0.80 | 0.85 | 0.85 | 0.10
+- group: l. Tropical Fruits and Trees
+  crop: Banana - 1^st year
+  kc_ini: 0.5
+  kc_ini_from_group: false
+  kc_mid: 1.1
+  kc_end: 1.0
+  max_height_m: 3.0
+  raw: 0.50 | 1.10 | 1.00 | 3
+- group: l. Tropical Fruits and Trees
+  crop: Banana - 2^nd year
+  kc_ini: 1.0
+  kc_ini_from_group: false
+  kc_mid: 1.2
+  kc_end: 1.1
+  max_height_m: 4.0
+  raw: 1.00 | 1.20 | 1.10 | 4
+- group: l. Tropical Fruits and Trees
+  crop: Cacao
+  kc_ini: 1.0
+  kc_ini_from_group: false
+  kc_mid: 1.05
+  kc_end: 1.05
+  max_height_m: 3.0
+  raw: 1.00 | 1.05 | 1.05 | 3
+- group: l. Tropical Fruits and Trees
+  crop: Coffee - bare ground cover
+  kc_ini: 0.9
+  kc_ini_from_group: false
+  kc_mid: 0.95
+  kc_end: 0.95
+  max_height_m:
+  - 2.0
+  - 3.0
+  raw: 0.90 | 0.95 | 0.95 | 2-3
+- group: l. Tropical Fruits and Trees
+  crop: Coffee - with weeds
+  kc_ini: 1.05
+  kc_ini_from_group: false
+  kc_mid: 1.1
+  kc_end: 1.1
+  max_height_m:
+  - 2.0
+  - 3.0
+  raw: 1.05 | 1.10 | 1.10 | 2-3
+- group: l. Tropical Fruits and Trees
+  crop: Date Palms
+  kc_ini: 0.9
+  kc_ini_from_group: false
+  kc_mid: 0.95
+  kc_end: 0.95
+  max_height_m: 8.0
+  raw: 0.90 | 0.95 | 0.95 | 8
+- group: l. Tropical Fruits and Trees
+  crop: Palm Trees
+  kc_ini: 0.95
+  kc_ini_from_group: false
+  kc_mid: 1.0
+  kc_end: 1.0
+  max_height_m: 8.0
+  raw: 0.95 | 1.00 | 1.00 | 8
+- group: l. Tropical Fruits and Trees
+  crop: Pineapple ^16 - bare soil
+  kc_ini: 0.5
+  kc_ini_from_group: false
+  kc_mid: 0.3
+  kc_end: 0.3
+  max_height_m:
+  - 0.6
+  - 1.2
+  raw: 0.50 | 0.30 | 0.30 | 0.6-1.2
+- group: l. Tropical Fruits and Trees
+  crop: Pineapple ^16 - with grass cover
+  kc_ini: 0.5
+  kc_ini_from_group: false
+  kc_mid: 0.5
+  kc_end: 0.5
+  max_height_m:
+  - 0.6
+  - 1.2
+  raw: 0.50 | 0.50 | 0.50 | 0.6-1.2
+- group: l. Tropical Fruits and Trees
+  crop: Rubber Trees
+  kc_ini: 0.95
+  kc_ini_from_group: false
+  kc_mid: 1.0
+  kc_end: 1.0
+  max_height_m: 10.0
+  raw: 0.95 | 1.00 | 1.00 | 10
+- group: l. Tropical Fruits and Trees
+  crop: Tea - non-shaded
+  kc_ini: 0.95
+  kc_ini_from_group: false
+  kc_mid: 1.0
+  kc_end: 1.0
+  max_height_m: 1.5
+  raw: 0.95 | 1.00 | 1.00 | 1.5
+- group: l. Tropical Fruits and Trees
+  crop: Tea - shaded ^17
+  kc_ini: 1.1
+  kc_ini_from_group: false
+  kc_mid: 1.15
+  kc_end: 1.15
+  max_height_m: 2.0
+  raw: 1.10 | 1.15 | 1.15 | 2
+- group: m. Grapes and Berries
+  crop: Berries (bushes)
+  kc_ini: 0.3
+  kc_ini_from_group: false
+  kc_mid: 1.05
+  kc_end: 0.5
+  max_height_m: 1.5
+  raw: 0.30 | 1.05 | 0.50 | 1.5
+- group: m. Grapes and Berries
+  crop: Grapes - Table or Raisin
+  kc_ini: 0.3
+  kc_ini_from_group: false
+  kc_mid: 0.85
+  kc_end: 0.45
+  max_height_m: 2.0
+  raw: 0.30 | 0.85 | 0.45 | 2
+- group: m. Grapes and Berries
+  crop: Grapes - Wine
+  kc_ini: 0.3
+  kc_ini_from_group: false
+  kc_mid: 0.7
+  kc_end: 0.45
+  max_height_m:
+  - 1.5
+  - 2.0
+  raw: 0.30 | 0.70 | 0.45 | 1.5-2
+- group: m. Grapes and Berries
+  crop: Hops
+  kc_ini: 0.3
+  kc_ini_from_group: false
+  kc_mid: 1.05
+  kc_end: 0.85
+  max_height_m: 5.0
+  raw: 0.3 | 1.05 | 0.85 | 5
+- group: n. Fruit Trees
+  crop: Almonds, no ground cover
+  kc_ini: 0.4
+  kc_ini_from_group: false
+  kc_mid: 0.9
+  kc_end: 0.65
+  max_height_m: 5.0
+  raw: 0.40 | 0.90 | 0.65^18 | 5
+- group: n. Fruit Trees
+  crop: Apples, Cherries, Pears ^19 - no ground cover, killing frost
+  kc_ini: 0.45
+  kc_ini_from_group: false
+  kc_mid: 0.95
+  kc_end: 0.7
+  max_height_m: 4.0
+  raw: 0.45 | 0.95 | 0.70^18 | 4
+- group: n. Fruit Trees
+  crop: Apples, Cherries, Pears ^19 - no ground cover, no frosts
+  kc_ini: 0.6
+  kc_ini_from_group: false
+  kc_mid: 0.95
+  kc_end: 0.75
+  max_height_m: 4.0
+  raw: 0.60 | 0.95 | 0.75^18 | 4
+- group: n. Fruit Trees
+  crop: Apples, Cherries, Pears ^19 - active ground cover, killing frost
+  kc_ini: 0.5
+  kc_ini_from_group: false
+  kc_mid: 1.2
+  kc_end: 0.95
+  max_height_m: 4.0
+  raw: 0.50 | 1.20 | 0.95^18 | 4
+- group: n. Fruit Trees
+  crop: Apples, Cherries, Pears ^19 - active ground cover, no frosts
+  kc_ini: 0.8
+  kc_ini_from_group: false
+  kc_mid: 1.2
+  kc_end: 0.85
+  max_height_m: 4.0
+  raw: 0.80 | 1.20 | 0.85^18 | 4
+- group: n. Fruit Trees
+  crop: Apricots, Peaches, Stone Fruit ^19, 20 - no ground cover, killing frost
+  kc_ini: 0.45
+  kc_ini_from_group: false
+  kc_mid: 0.9
+  kc_end: 0.65
+  max_height_m: 3.0
+  raw: 0.45 | 0.90 | 0.65^18 | 3
+- group: n. Fruit Trees
+  crop: Apricots, Peaches, Stone Fruit ^19, 20 - no ground cover, no frosts
+  kc_ini: 0.55
+  kc_ini_from_group: false
+  kc_mid: 0.9
+  kc_end: 0.65
+  max_height_m: 3.0
+  raw: 0.55 | 0.90 | 0.65^18 | 3
+- group: n. Fruit Trees
+  crop: Apricots, Peaches, Stone Fruit ^19, 20 - active ground cover, killing frost
+  kc_ini: 0.5
+  kc_ini_from_group: false
+  kc_mid: 1.15
+  kc_end: 0.9
+  max_height_m: 3.0
+  raw: 0.50 | 1.15 | 0.90^18 | 3
+- group: n. Fruit Trees
+  crop: Apricots, Peaches, Stone Fruit ^19, 20 - active ground cover, no frosts
+  kc_ini: 0.8
+  kc_ini_from_group: false
+  kc_mid: 1.15
+  kc_end: 0.85
+  max_height_m: 3.0
+  raw: 0.80 | 1.15 | 0.85^18 | 3
+- group: n. Fruit Trees
+  crop: Avocado, no ground cover
+  kc_ini: 0.6
+  kc_ini_from_group: false
+  kc_mid: 0.85
+  kc_end: 0.75
+  max_height_m: 3.0
+  raw: 0.60 | 0.85 | 0.75 | 3
+- group: n. Fruit Trees
+  crop: Citrus, no ground cover ^21 - 70% canopy
+  kc_ini: 0.7
+  kc_ini_from_group: false
+  kc_mid: 0.65
+  kc_end: 0.7
+  max_height_m: 4.0
+  raw: 0.70 | 0.65 | 0.70 | 4
+- group: n. Fruit Trees
+  crop: Citrus, no ground cover ^21 - 50% canopy
+  kc_ini: 0.65
+  kc_ini_from_group: false
+  kc_mid: 0.6
+  kc_end: 0.65
+  max_height_m: 3.0
+  raw: 0.65 | 0.60 | 0.65 | 3
+- group: n. Fruit Trees
+  crop: Citrus, no ground cover ^21 - 20% canopy
+  kc_ini: 0.5
+  kc_ini_from_group: false
+  kc_mid: 0.45
+  kc_end: 0.55
+  max_height_m: 2.0
+  raw: 0.50 | 0.45 | 0.55 | 2
+- group: n. Fruit Trees
+  crop: Citrus, with active ground cover or weeds ^22 - 70% canopy
+  kc_ini: 0.75
+  kc_ini_from_group: false
+  kc_mid: 0.7
+  kc_end: 0.75
+  max_height_m: 4.0
+  raw: 0.75 | 0.70 | 0.75 | 4
+- group: n. Fruit Trees
+  crop: Citrus, with active ground cover or weeds ^22 - 50% canopy
+  kc_ini: 0.8
+  kc_ini_from_group: false
+  kc_mid: 0.8
+  kc_end: 0.8
+  max_height_m: 3.0
+  raw: 0.80 | 0.80 | 0.80 | 3
+- group: n. Fruit Trees
+  crop: Citrus, with active ground cover or weeds ^22 - 20% canopy
+  kc_ini: 0.85
+  kc_ini_from_group: false
+  kc_mid: 0.85
+  kc_end: 0.85
+  max_height_m: 2.0
+  raw: 0.85 | 0.85 | 0.85 | 2
+- group: n. Fruit Trees
+  crop: Conifer Trees ^23
+  kc_ini: 1.0
+  kc_ini_from_group: false
+  kc_mid: 1.0
+  kc_end: 1.0
+  max_height_m: 10.0
+  raw: 1.00 | 1.00 | 1.00 | 10
+- group: n. Fruit Trees
+  crop: Kiwi
+  kc_ini: 0.4
+  kc_ini_from_group: false
+  kc_mid: 1.05
+  kc_end: 1.05
+  max_height_m: 3.0
+  raw: 0.40 | 1.05 | 1.05 | 3
+- group: n. Fruit Trees
+  crop: Olives (40 to 60% ground coverage by canopy) ^24
+  kc_ini: 0.65
+  kc_ini_from_group: false
+  kc_mid: 0.7
+  kc_end: 0.7
+  max_height_m:
+  - 3.0
+  - 5.0
+  raw: 0.65 | 0.70 | 0.70 | 3-5
+- group: n. Fruit Trees
+  crop: Pistachios, no ground cover
+  kc_ini: 0.4
+  kc_ini_from_group: false
+  kc_mid: 1.1
+  kc_end: 0.45
+  max_height_m:
+  - 3.0
+  - 5.0
+  raw: 0.40 | 1.10 | 0.45 | 3-5
+- group: n. Fruit Trees
+  crop: Walnut Orchard ^19
+  kc_ini: 0.5
+  kc_ini_from_group: false
+  kc_mid: 1.1
+  kc_end: 0.6518
+  max_height_m:
+  - 4.0
+  - 5.0
+  raw: 0.50 | 1.10 | 0.6518 | 4-5
+- group: o. Wetlands - temperate climate
+  crop: Cattails, Bulrushes, killing frost
+  kc_ini: 0.3
+  kc_ini_from_group: false
+  kc_mid: 1.2
+  kc_end: 0.3
+  max_height_m: 2.0
+  raw: 0.30 | 1.20 | 0.30 | 2
+- group: o. Wetlands - temperate climate
+  crop: Cattails, Bulrushes, no frost
+  kc_ini: 0.6
+  kc_ini_from_group: false
+  kc_mid: 1.2
+  kc_end: 0.6
+  max_height_m: 2.0
+  raw: 0.60 | 1.20 | 0.60 | 2
+- group: o. Wetlands - temperate climate
+  crop: Short Veg., no frost
+  kc_ini: 1.05
+  kc_ini_from_group: false
+  kc_mid: 1.1
+  kc_end: 1.1
+  max_height_m: 0.3
+  raw: 1.05 | 1.10 | 1.10 | 0.3
+- group: o. Wetlands - temperate climate
+  crop: Reed Swamp, standing water
+  kc_ini: 1.0
+  kc_ini_from_group: false
+  kc_mid: 1.2
+  kc_end: 1.0
+  max_height_m:
+  - 1.0
+  - 3.0
+  raw: 1.00 | 1.20 | 1.00 | 1-3
+- group: o. Wetlands - temperate climate
+  crop: Reed Swamp, moist soil
+  kc_ini: 0.9
+  kc_ini_from_group: false
+  kc_mid: 1.2
+  kc_end: 0.7
+  max_height_m:
+  - 1.0
+  - 3.0
+  raw: 0.90 | 1.20 | 0.70 | 1-3
+- group: p. Special
+  crop: Open Water, < 2 m depth or in subhumid climates or tropics
+  kc_ini: null
+  kc_ini_from_group: true
+  kc_mid: 1.05
+  kc_end: 1.05
+  max_height_m: null
+  raw: ' | 1.05 | 1.05 | '
+- group: p. Special
+  crop: Open Water, > 5 m depth, clear of turbidity, temperate climate
+  kc_ini: null
+  kc_ini_from_group: true
+  kc_mid: 0.6525
+  kc_end: 1.2525
+  max_height_m: null
+  raw: ' | 0.6525 | 1.2525 | '
+table22:
+- group: a. Small Vegetables
+  crop: Broccoli
+  root_depth_m:
+  - 0.4
+  - 0.6
+  depletion_p: 0.45
+  raw: 0.4-0.6 | 0.45
+- group: a. Small Vegetables
+  crop: Brussel Sprouts
+  root_depth_m:
+  - 0.4
+  - 0.6
+  depletion_p: 0.45
+  raw: 0.4-0.6 | 0.45
+- group: a. Small Vegetables
+  crop: Cabbage
+  root_depth_m:
+  - 0.5
+  - 0.8
+  depletion_p: 0.45
+  raw: 0.5-0.8 | 0.45
+- group: a. Small Vegetables
+  crop: Carrots
+  root_depth_m:
+  - 0.5
+  - 1.0
+  depletion_p: 0.35
+  raw: 0.5-1.0 | 0.35
+- group: a. Small Vegetables
+  crop: Cauliflower
+  root_depth_m:
+  - 0.4
+  - 0.7
+  depletion_p: 0.45
+  raw: 0.4-0.7 | 0.45
+- group: a. Small Vegetables
+  crop: Celery
+  root_depth_m:
+  - 0.3
+  - 0.5
+  depletion_p: 0.2
+  raw: 0.3-0.5 | 0.20
+- group: a. Small Vegetables
+  crop: Garlic
+  root_depth_m:
+  - 0.3
+  - 0.5
+  depletion_p: 0.3
+  raw: 0.3-0.5 | 0.30
+- group: a. Small Vegetables
+  crop: Lettuce
+  root_depth_m:
+  - 0.3
+  - 0.5
+  depletion_p: 0.3
+  raw: 0.3-0.5 | 0.30
+- group: a. Small Vegetables
+  crop: Onions - dry
+  root_depth_m:
+  - 0.3
+  - 0.6
+  depletion_p: 0.3
+  raw: 0.3-0.6 | 0.30
+- group: a. Small Vegetables
+  crop: Onions - green
+  root_depth_m:
+  - 0.3
+  - 0.6
+  depletion_p: 0.3
+  raw: 0.3-0.6 | 0.30
+- group: a. Small Vegetables
+  crop: Onions - seed
+  root_depth_m:
+  - 0.3
+  - 0.6
+  depletion_p: 0.35
+  raw: 0.3-0.6 | 0.35
+- group: a. Small Vegetables
+  crop: Spinach
+  root_depth_m:
+  - 0.3
+  - 0.5
+  depletion_p: 0.2
+  raw: 0.3-0.5 | 0.20
+- group: a. Small Vegetables
+  crop: Radishes
+  root_depth_m:
+  - 0.3
+  - 0.5
+  depletion_p: 0.3
+  raw: 0.3-0.5 | 0.30
+- group: b. Vegetables - Solarium Family (Solanaceae)
+  crop: Egg Plant
+  root_depth_m:
+  - 0.7
+  - 1.2
+  depletion_p: 0.45
+  raw: 0.7-1.2 | 0.45
+- group: b. Vegetables - Solarium Family (Solanaceae)
+  crop: Sweet Peppers (bell)
+  root_depth_m:
+  - 0.5
+  - 1.0
+  depletion_p: 0.3
+  raw: 0.5-1.0 | 0.30
+- group: b. Vegetables - Solarium Family (Solanaceae)
+  crop: Tomato
+  root_depth_m:
+  - 0.7
+  - 1.5
+  depletion_p: 0.4
+  raw: 0.7-1.5 | 0.40
+- group: c. Vegetables - Cucumber Family (Cucurbitaceae)
+  crop: Cantaloupe
+  root_depth_m:
+  - 0.9
+  - 1.5
+  depletion_p: 0.45
+  raw: 0.9-1.5 | 0.45
+- group: c. Vegetables - Cucumber Family (Cucurbitaceae)
+  crop: Cucumber - Fresh Market
+  root_depth_m:
+  - 0.7
+  - 1.2
+  depletion_p: 0.5
+  raw: 0.7-1.2 | 0.50
+- group: c. Vegetables - Cucumber Family (Cucurbitaceae)
+  crop: Cucumber - Machine harvest
+  root_depth_m:
+  - 0.7
+  - 1.2
+  depletion_p: 0.5
+  raw: 0.7-1.2 | 0.50
+- group: c. Vegetables - Cucumber Family (Cucurbitaceae)
+  crop: Pumpkin, Winter Squash
+  root_depth_m:
+  - 1.0
+  - 1.5
+  depletion_p: 0.35
+  raw: 1.0-1.5 | 0.35
+- group: c. Vegetables - Cucumber Family (Cucurbitaceae)
+  crop: Squash, Zucchini
+  root_depth_m:
+  - 0.6
+  - 1.0
+  depletion_p: 0.5
+  raw: 0.6-1.0 | 0.50
+- group: c. Vegetables - Cucumber Family (Cucurbitaceae)
+  crop: Sweet Melons
+  root_depth_m:
+  - 0.8
+  - 1.5
+  depletion_p: 0.4
+  raw: 0.8-1.5 | 0.40
+- group: c. Vegetables - Cucumber Family (Cucurbitaceae)
+  crop: Watermelon
+  root_depth_m:
+  - 0.8
+  - 1.5
+  depletion_p: 0.4
+  raw: 0.8-1.5 | 0.40
+- group: d. Roots and Tubers
+  crop: Beets, table
+  root_depth_m:
+  - 0.6
+  - 1.0
+  depletion_p: 0.5
+  raw: 0.6-1.0 | 0.50
+- group: d. Roots and Tubers
+  crop: Cassava - year 1
+  root_depth_m:
+  - 0.5
+  - 0.8
+  depletion_p: 0.35
+  raw: 0.5-0.8 | 0.35
+- group: d. Roots and Tubers
+  crop: Cassava - year 2
+  root_depth_m:
+  - 0.7
+  - 1.0
+  depletion_p: 0.4
+  raw: 0.7-1.0 | 0.40
+- group: d. Roots and Tubers
+  crop: Parsnip
+  root_depth_m:
+  - 0.5
+  - 1.0
+  depletion_p: 0.4
+  raw: 0.5-1.0 | 0.40
+- group: d. Roots and Tubers
+  crop: Potato
+  root_depth_m:
+  - 0.4
+  - 0.6
+  depletion_p: 0.35
+  raw: 0.4-0.6 | 0.35
+- group: d. Roots and Tubers
+  crop: Sweet Potato
+  root_depth_m:
+  - 1.0
+  - 1.5
+  depletion_p: 0.65
+  raw: 1.0-1.5 | 0.65
+- group: d. Roots and Tubers
+  crop: Turnip (and Rutabaga)
+  root_depth_m:
+  - 0.5
+  - 1.0
+  depletion_p: 0.5
+  raw: 0.5-1.0 | 0.50
+- group: d. Roots and Tubers
+  crop: Sugar Beet
+  root_depth_m:
+  - 0.7
+  - 1.2
+  depletion_p: 0.55
+  raw: 0.7-1.2 | 0.55^3
+- group: e. Legumes (Leguminosae)
+  crop: Beans, green
+  root_depth_m:
+  - 0.5
+  - 0.7
+  depletion_p: 0.45
+  raw: 0.5-0.7 | 0.45
+- group: e. Legumes (Leguminosae)
+  crop: Beans, dry and Pulses
+  root_depth_m:
+  - 0.6
+  - 0.9
+  depletion_p: 0.45
+  raw: 0.6-0.9 | 0.45
+- group: e. Legumes (Leguminosae)
+  crop: Beans, lima, large vines
+  root_depth_m:
+  - 0.8
+  - 1.2
+  depletion_p: 0.45
+  raw: 0.8-1.2 | 0.45
+- group: e. Legumes (Leguminosae)
+  crop: Chick pea
+  root_depth_m:
+  - 0.6
+  - 1.0
+  depletion_p: 0.5
+  raw: 0.6-1.0 | 0.50
+- group: e. Legumes (Leguminosae)
+  crop: Fababean (broad bean) - Fresh
+  root_depth_m:
+  - 0.5
+  - 0.7
+  depletion_p: 0.45
+  raw: 0.5-0.7 | 0.45
+- group: e. Legumes (Leguminosae)
+  crop: Fababean (broad bean) - Dry/Seed
+  root_depth_m:
+  - 0.5
+  - 0.7
+  depletion_p: 0.45
+  raw: 0.5-0.7 | 0.45
+- group: e. Legumes (Leguminosae)
+  crop: Grabanzo
+  root_depth_m:
+  - 0.6
+  - 1.0
+  depletion_p: 0.45
+  raw: 0.6-1.0 | 0.45
+- group: e. Legumes (Leguminosae)
+  crop: Green Gram and Cowpeas
+  root_depth_m:
+  - 0.6
+  - 1.0
+  depletion_p: 0.45
+  raw: 0.6-1.0 | 0.45
+- group: e. Legumes (Leguminosae)
+  crop: Groundnut (Peanut)
+  root_depth_m:
+  - 0.5
+  - 1.0
+  depletion_p: 0.5
+  raw: 0.5-1.0 | 0.50
+- group: e. Legumes (Leguminosae)
+  crop: Lentil
+  root_depth_m:
+  - 0.6
+  - 0.8
+  depletion_p: 0.5
+  raw: 0.6-0.8 | 0.50
+- group: e. Legumes (Leguminosae)
+  crop: Peas - Fresh
+  root_depth_m:
+  - 0.6
+  - 1.0
+  depletion_p: 0.35
+  raw: 0.6-1.0 | 0.35
+- group: e. Legumes (Leguminosae)
+  crop: Peas - Dry/Seed
+  root_depth_m:
+  - 0.6
+  - 1.0
+  depletion_p: 0.4
+  raw: 0.6-1.0 | 0.40
+- group: e. Legumes (Leguminosae)
+  crop: Soybeans
+  root_depth_m:
+  - 0.6
+  - 1.3
+  depletion_p: 0.5
+  raw: 0.6-1.3 | 0.50
+- group: f. Perennial Vegetables (with winter dormancy and initially bare or mulched soil)
+  crop: Artichokes
+  root_depth_m:
+  - 0.6
+  - 0.9
+  depletion_p: 0.45
+  raw: 0.6-0.9 | 0.45
+- group: f. Perennial Vegetables (with winter dormancy and initially bare or mulched soil)
+  crop: Asparagus
+  root_depth_m:
+  - 1.2
+  - 1.8
+  depletion_p: 0.45
+  raw: 1.2-1.8 | 0.45
+- group: f. Perennial Vegetables (with winter dormancy and initially bare or mulched soil)
+  crop: Mint
+  root_depth_m:
+  - 0.4
+  - 0.8
+  depletion_p: 0.4
+  raw: 0.4-0.8 | 0.40
+- group: f. Perennial Vegetables (with winter dormancy and initially bare or mulched soil)
+  crop: Strawberries
+  root_depth_m:
+  - 0.2
+  - 0.3
+  depletion_p: 0.2
+  raw: 0.2-0.3 | 0.20
+- group: g. Fibre Crops
+  crop: Cotton
+  root_depth_m:
+  - 1.0
+  - 1.7
+  depletion_p: 0.65
+  raw: 1.0-1.7 | 0.65
+- group: g. Fibre Crops
+  crop: Flax
+  root_depth_m:
+  - 1.0
+  - 1.5
+  depletion_p: 0.5
+  raw: 1.0-1.5 | 0.50
+- group: g. Fibre Crops
+  crop: Sisal
+  root_depth_m:
+  - 0.5
+  - 1.0
+  depletion_p: 0.8
+  raw: 0.5-1.0 | 0.80
+- group: h. Oil Crops
+  crop: Castorbean (Ricinus)
+  root_depth_m:
+  - 1.0
+  - 2.0
+  depletion_p: 0.5
+  raw: 1.0-2.0 | 0.50
+- group: h. Oil Crops
+  crop: Rapeseed, Canola
+  root_depth_m:
+  - 1.0
+  - 1.5
+  depletion_p: 0.6
+  raw: 1.0-1.5 | 0.60
+- group: h. Oil Crops
+  crop: Safflower
+  root_depth_m:
+  - 1.0
+  - 2.0
+  depletion_p: 0.6
+  raw: 1.0-2.0 | 0.60
+- group: h. Oil Crops
+  crop: Sesame
+  root_depth_m:
+  - 1.0
+  - 1.5
+  depletion_p: 0.6
+  raw: 1.0-1.5 | 0.60
+- group: h. Oil Crops
+  crop: Sunflower
+  root_depth_m:
+  - 0.8
+  - 1.5
+  depletion_p: 0.45
+  raw: 0.8-1.5 | 0.45
+- group: i. Cereals
+  crop: Barley
+  root_depth_m:
+  - 1.0
+  - 1.5
+  depletion_p: 0.55
+  raw: 1.0-1.5 | 0.55
+- group: i. Cereals
+  crop: Oats
+  root_depth_m:
+  - 1.0
+  - 1.5
+  depletion_p: 0.55
+  raw: 1.0-1.5 | 0.55
+- group: i. Cereals
+  crop: Spring Wheat
+  root_depth_m:
+  - 1.0
+  - 1.5
+  depletion_p: 0.55
+  raw: 1.0-1.5 | 0.55
+- group: i. Cereals
+  crop: Winter Wheat
+  root_depth_m:
+  - 1.5
+  - 1.8
+  depletion_p: 0.55
+  raw: 1.5-1.8 | 0.55
+- group: i. Cereals
+  crop: Maize, Field (grain) (field corn)
+  root_depth_m:
+  - 1.0
+  - 1.7
+  depletion_p: 0.55
+  raw: 1.0-1.7 | 0.55
+- group: i. Cereals
+  crop: Maize, Sweet (sweet corn)
+  root_depth_m:
+  - 0.8
+  - 1.2
+  depletion_p: 0.5
+  raw: 0.8-1.2 | 0.50
+- group: i. Cereals
+  crop: Millet
+  root_depth_m:
+  - 1.0
+  - 2.0
+  depletion_p: 0.55
+  raw: 1.0-2.0 | 0.55
+- group: i. Cereals
+  crop: Sorghum - grain
+  root_depth_m:
+  - 1.0
+  - 2.0
+  depletion_p: 0.55
+  raw: 1.0-2.0 | 0.55
+- group: i. Cereals
+  crop: Sorghum - sweet
+  root_depth_m:
+  - 1.0
+  - 2.0
+  depletion_p: 0.5
+  raw: 1.0-2.0 | 0.50
+- group: i. Cereals
+  crop: Rice
+  root_depth_m:
+  - 0.5
+  - 1.0
+  depletion_p: 0.2
+  raw: 0.5-1.0 | 0.20^4
+- group: j. Forages
+  crop: Alfalfa - for hay
+  root_depth_m:
+  - 1.0
+  - 2.0
+  depletion_p: 0.55
+  raw: 1.0-2.0 | 0.55
+- group: j. Forages
+  crop: Alfalfa - for seed
+  root_depth_m:
+  - 1.0
+  - 3.0
+  depletion_p: 0.6
+  raw: 1.0-3.0 | 0.60
+- group: j. Forages
+  crop: Bermuda - for hay
+  root_depth_m:
+  - 1.0
+  - 1.5
+  depletion_p: 0.55
+  raw: 1.0-1.5 | 0.55
+- group: j. Forages
+  crop: Bermuda - Spring crop for seed
+  root_depth_m:
+  - 1.0
+  - 1.5
+  depletion_p: 0.6
+  raw: 1.0-1.5 | 0.60
+- group: j. Forages
+  crop: Clover hay, Berseem
+  root_depth_m:
+  - 0.6
+  - 0.9
+  depletion_p: 0.5
+  raw: 0.6-0.9 | 0.50
+- group: j. Forages
+  crop: Rye Grass hay
+  root_depth_m:
+  - 0.6
+  - 1.0
+  depletion_p: 0.6
+  raw: 0.6-1.0 | 0.60
+- group: j. Forages
+  crop: Sudan Grass hay (annual)
+  root_depth_m:
+  - 1.0
+  - 1.5
+  depletion_p: 0.55
+  raw: 1.0-1.5 | 0.55
+- group: j. Forages
+  crop: Grazing Pasture - Rotated Grazing
+  root_depth_m:
+  - 0.5
+  - 1.5
+  depletion_p: 0.6
+  raw: 0.5-1.5 | 0.60
+- group: j. Forages
+  crop: Grazing Pasture - Extensive Grazing
+  root_depth_m:
+  - 0.5
+  - 1.5
+  depletion_p: 0.6
+  raw: 0.5-1.5 | 0.60
+- group: j. Forages
+  crop: Turf grass - cool season ^5
+  root_depth_m:
+  - 0.5
+  - 1.0
+  depletion_p: 0.4
+  raw: 0.5-1.0 | 0.40
+- group: j. Forages
+  crop: Turf grass - warm season ^5
+  root_depth_m:
+  - 0.5
+  - 1.0
+  depletion_p: 0.5
+  raw: 0.5-1.0 | 0.50
+- group: l. Tropical Fruits and Trees
+  crop: Banana - 1^st year
+  root_depth_m:
+  - 0.5
+  - 0.9
+  depletion_p: 0.35
+  raw: 0.5-0.9 | 0.35
+- group: l. Tropical Fruits and Trees
+  crop: Banana - 2^nd year
+  root_depth_m:
+  - 0.5
+  - 0.9
+  depletion_p: 0.35
+  raw: 0.5-0.9 | 0.35
+- group: l. Tropical Fruits and Trees
+  crop: Cacao
+  root_depth_m:
+  - 0.7
+  - 1.0
+  depletion_p: 0.3
+  raw: 0.7-1.0 | 0.30
+- group: l. Tropical Fruits and Trees
+  crop: Coffee
+  root_depth_m:
+  - 0.9
+  - 1.5
+  depletion_p: 0.4
+  raw: 0.9-1.5 | 0.40
+- group: l. Tropical Fruits and Trees
+  crop: Date Palms
+  root_depth_m:
+  - 1.5
+  - 2.5
+  depletion_p: 0.5
+  raw: 1.5-2.5 | 0.50
+- group: l. Tropical Fruits and Trees
+  crop: Palm Trees
+  root_depth_m:
+  - 0.7
+  - 1.1
+  depletion_p: 0.65
+  raw: 0.7-1.1 | 0.65
+- group: l. Tropical Fruits and Trees
+  crop: Pineapple
+  root_depth_m:
+  - 0.3
+  - 0.6
+  depletion_p: 0.5
+  raw: 0.3-0.6 | 0.50
+- group: l. Tropical Fruits and Trees
+  crop: Rubber Trees
+  root_depth_m:
+  - 1.0
+  - 1.5
+  depletion_p: 0.4
+  raw: 1.0-1.5 | 0.40
+- group: l. Tropical Fruits and Trees
+  crop: Tea - non-shaded
+  root_depth_m:
+  - 0.9
+  - 1.5
+  depletion_p: 0.4
+  raw: 0.9-1.5 | 0.40
+- group: l. Tropical Fruits and Trees
+  crop: Tea - shaded
+  root_depth_m:
+  - 0.9
+  - 1.5
+  depletion_p: 0.45
+  raw: 0.9-1.5 | 0.45
+- group: m. Grapes and Berries
+  crop: Berries (bushes)
+  root_depth_m:
+  - 0.6
+  - 1.2
+  depletion_p: 0.5
+  raw: 0.6-1.2 | 0.50
+- group: m. Grapes and Berries
+  crop: Grapes - Table or Raisin
+  root_depth_m:
+  - 1.0
+  - 2.0
+  depletion_p: 0.35
+  raw: 1.0-2.0 | 0.35
+- group: m. Grapes and Berries
+  crop: Grapes - Wine
+  root_depth_m:
+  - 1.0
+  - 2.0
+  depletion_p: 0.45
+  raw: 1.0-2.0 | 0.45
+- group: m. Grapes and Berries
+  crop: Hops
+  root_depth_m:
+  - 1.0
+  - 1.2
+  depletion_p: 0.5
+  raw: 1.0-1.2 | 0.50
+- group: n. Fruit Trees
+  crop: Almonds
+  root_depth_m:
+  - 1.0
+  - 2.0
+  depletion_p: 0.4
+  raw: 1.0-2.0 | 0.40
+- group: n. Fruit Trees
+  crop: Apples, Cherries, Pears
+  root_depth_m:
+  - 1.0
+  - 2.0
+  depletion_p: 0.5
+  raw: 1.0-2.0 | 0.50
+- group: n. Fruit Trees
+  crop: Apricots, Peaches, Stone Fruit
+  root_depth_m:
+  - 1.0
+  - 2.0
+  depletion_p: 0.5
+  raw: 1.0-2.0 | 0.50
+- group: n. Fruit Trees
+  crop: Avocado
+  root_depth_m:
+  - 0.5
+  - 1.0
+  depletion_p: 0.7
+  raw: 0.5-1.0 | 0.70
+- group: n. Fruit Trees
+  crop: Citrus - 70% canopy
+  root_depth_m:
+  - 1.2
+  - 1.5
+  depletion_p: 0.5
+  raw: 1.2-1.5 | 0.50
+- group: n. Fruit Trees
+  crop: Citrus - 50% canopy
+  root_depth_m:
+  - 1.1
+  - 1.5
+  depletion_p: 0.5
+  raw: 1.1-1.5 | 0.50
+- group: n. Fruit Trees
+  crop: Citrus - 20% canopy
+  root_depth_m:
+  - 0.8
+  - 1.1
+  depletion_p: 0.5
+  raw: 0.8-1.1 | 0.50
+- group: n. Fruit Trees
+  crop: Conifer Trees
+  root_depth_m:
+  - 1.0
+  - 1.5
+  depletion_p: 0.7
+  raw: 1.0-1.5 | 0.70
+- group: n. Fruit Trees
+  crop: Kiwi
+  root_depth_m:
+  - 0.7
+  - 1.3
+  depletion_p: 0.35
+  raw: 0.7-1.3 | 0.35
+- group: n. Fruit Trees
+  crop: Olives (40 to 60% ground coverage by canopy)
+  root_depth_m:
+  - 1.2
+  - 1.7
+  depletion_p: 0.65
+  raw: 1.2-1.7 | 0.65
+- group: n. Fruit Trees
+  crop: Pistachios
+  root_depth_m:
+  - 1.0
+  - 1.5
+  depletion_p: 0.4
+  raw: 1.0-1.5 | 0.40
+- group: n. Fruit Trees
+  crop: Walnut Orchard
+  root_depth_m:
+  - 1.7
+  - 2.4
+  depletion_p: 0.5
+  raw: 1.7-2.4 | 0.50

@@ -1,0 +1,34 @@
+# Secrets
+.env
+*.pem
+*service-account*.json
+*-credentials.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Node
+node_modules/
+dist/
+
+# Local cache (demo_cache/ is committed on purpose)
+backend/cache.sqlite*
+*.sqlite3
+
+# Probe outputs (raw responses; summaries go to docs/DATA_SOURCES.md)
+scripts/probe/out/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local Claude Code settings (not part of the project)
+.claude/

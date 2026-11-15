@@ -1,0 +1,812 @@
+# Hand-curated crop parameter table — DRAFT (stage 0).
+#
+# Rules
+# - Every value has a source. A block's `source` key applies to every value in it.
+# - `null` means "not yet sourced". The app must treat null as unknown, never as 0.
+# - No value here was typed from memory: the `fao56` blocks were transcribed from
+#   the HTML tables of FAO-56 (see `sources.fao56_t12` / `sources.fao56_t22`),
+#   extracted programmatically on 2026-11-03 and checked row by row. Since 2026-11-13
+#   data/fao56_table12_22.yaml (scripts/extract_fao56_table12_22.py) holds the extracted
+#   Tables 12 and 22; backend/tests/test_fao56_tables.py checks these blocks against it.
+# - Ranges are stored as [low, high] even where FAO-56 prints them high-low
+#   (e.g. maize Kc_end "0.60-0.35": higher when harvested fresh / high moisture).
+# - FAO-56 Kc_ini left blank for a crop means the crop-group value applies
+#   (FAO-56 Table 12 convention); those cells are marked `kc_ini_from_group: true`.
+# - FAO-56 Kc values are for sub-humid climate (RHmin ~45 %, u2 ~2 m/s) and must
+#   be adjusted for local RHmin/wind (FAO-56 eq. 62 / 65) — done in code, not here
+#   (backend/app/features/kc_climate.py; max_height_m is the crop height h).
+#
+# Pending (stage 1+), all null for now:
+#   temperature/rainfall optimum & absolute limits, growing-season length,
+#   drought / frost / heat tolerance, organic-matter contribution, forage value,
+#   pest/disease groups, FAO-56 Table 11 stage lengths.
+#   FAO ECOCROP is NOT used (licence unconfirmed, see docs/DATA_SOURCES.md).
+#   Decision 2026-11-03: these fields come from peer-reviewed literature,
+#   with DOI + table/page per value; FAO has been asked about ECOCROP reuse.
+
+version: 0.1-draft
+sources:
+  fao56_t12:
+    citation: >-
+      Allen, R.G., Pereira, L.S., Raes, D., Smith, M. (1998). Crop
+      evapotranspiration — Guidelines for computing crop water requirements.
+      FAO Irrigation and Drainage Paper 56. FAO, Rome. Table 12.
+    url: https://www.fao.org/4/X0490E/x0490e0b.htm
+    fields: [kc_ini, kc_mid, kc_end, max_height_m]
+  fao56_t22:
+    citation: Allen et al. (1998), FAO-56, Table 22.
+    url: https://www.fao.org/4/X0490E/x0490e0e.htm
+    fields: [root_depth_m, depletion_p]
+    note: depletion_p is for ETc ~5 mm/day; adjust with FAO-56 eq. 84 / Table 22 note.
+  taxonomy:
+    citation: Plants of the World Online (POWO), Royal Botanic Gardens, Kew. APG IV families.
+    url: https://powo.science.kew.org/
+    status: to_verify  # families entered from botanical knowledge; verify against POWO in stage 1
+  derived_n_fixation:
+    citation: >-
+      Rule: Fabaceae crops form symbioses with N-fixing rhizobia. Actual fixation
+      depends on inoculation, soil N and management — flagged for local checking.
+    fields: [nitrogen_fixing]
+
+crops:
+  # ---------------------------------------------------------------- cereals (Poaceae)
+  - id: winter_wheat
+    name: {en: Winter wheat, tr: Kışlık buğday}
+    scientific: Triticum aestivum
+    family: Poaceae
+    group: cereal
+    nitrogen_fixing: false
+    fao56:
+      row: "Winter Wheat - with non-frozen soils / with frozen soils"
+      kc_ini: 0.7          # non-frozen soils; 0.4 with frozen soils
+      kc_ini_frozen_soils: 0.4
+      kc_mid: 1.15
+      kc_end: [0.25, 0.4]
+      max_height_m: 1      # printed on the "with frozen soils" row only
+      root_depth_m: [1.5, 1.8]
+      depletion_p: 0.55
+
+  - id: spring_wheat
+    name: {en: Spring wheat, tr: Yazlık buğday}
+    scientific: Triticum aestivum
+    family: Poaceae
+    group: cereal
+    nitrogen_fixing: false
+    fao56:
+      row: Spring Wheat
+      kc_ini: 0.3
+      kc_ini_from_group: true
+      kc_mid: 1.15
+      kc_end: [0.25, 0.4]
+      max_height_m: 1
+      root_depth_m: [1.0, 1.5]
+      depletion_p: 0.55
+
+  - id: barley
+    name: {en: Barley, tr: Arpa}
+    scientific: Hordeum vulgare
+    family: Poaceae
+    group: cereal
+    nitrogen_fixing: false
+    fao56:
+      row: Barley
+      kc_ini: 0.3
+      kc_ini_from_group: true
+      kc_mid: 1.15
+      kc_end: 0.25
+      max_height_m: 1
+      root_depth_m: [1.0, 1.5]
+      depletion_p: 0.55
+
+  - id: oats
+    name: {en: Oats, tr: Yulaf}
+    scientific: Avena sativa
+    family: Poaceae
+    group: cereal
+    nitrogen_fixing: false
+    fao56:
+      row: Oats
+      kc_ini: 0.3
+      kc_ini_from_group: true
+      kc_mid: 1.15
+      kc_end: 0.25
+      max_height_m: 1
+      root_depth_m: [1.0, 1.5]
+      depletion_p: 0.55
+
+  - id: maize_grain
+    name: {en: Maize (grain), tr: Dane mısır}
+    scientific: Zea mays
+    family: Poaceae
+    group: cereal
+    nitrogen_fixing: false
+    fao56:
+      row: Maize, Field (grain) (field corn)
+      kc_ini: 0.3
+      kc_ini_from_group: true
+      kc_mid: 1.20
+      kc_end: [0.35, 0.60]
+      max_height_m: 2
+      root_depth_m: [1.0, 1.7]
+      depletion_p: 0.55
+
+  - id: sorghum_grain
+    name: {en: Sorghum (grain), tr: Dane sorgum}
+    scientific: Sorghum bicolor
+    family: Poaceae
+    group: cereal
+    nitrogen_fixing: false
+    fao56:
+      row: Sorghum - grain
+      kc_ini: 0.3
+      kc_ini_from_group: true
+      kc_mid: [1.00, 1.10]
+      kc_end: 0.55
+      max_height_m: [1, 2]
+      root_depth_m: [1.0, 2.0]
+      depletion_p: 0.55
+
+  - id: millet
+    name: {en: Millet, tr: Darı}
+    scientific: Pennisetum glaucum  # pearl millet assumed; FAO-56 row is generic "Millet"
+    family: Poaceae
+    group: cereal
+    nitrogen_fixing: false
+    fao56:
+      row: Millet
+      kc_ini: 0.3
+      kc_ini_from_group: true
+      kc_mid: 1.00
+      kc_end: 0.30
+      max_height_m: 1.5
+      root_depth_m: [1.0, 2.0]
+      depletion_p: 0.55
+
+  - id: rice
+    name: {en: Rice, tr: Çeltik}
+    scientific: Oryza sativa
+    family: Poaceae
+    group: cereal
+    nitrogen_fixing: false
+    fao56:
+      row: Rice
+      kc_ini: 1.05
+      kc_mid: 1.20
+      kc_end: [0.60, 0.90]
+      max_height_m: 1
+      root_depth_m: [0.5, 1.0]
+      depletion_p: 0.20   # FAO-56 Table 22 footnote 4: relative to saturation
+
+  - id: cereal_rye
+    name: {en: Cereal rye (cover), tr: Çavdar (örtü)}
+    scientific: Secale cereale
+    family: Poaceae
+    group: cover
+    nitrogen_fixing: false
+    fao56: null   # not listed in FAO-56 Table 12/22 — needs another source
+    fao56_analog:
+      crop: barley
+      assumption: >-
+        Analogy (decision K3-a, docs/drafts/plan_ecocrop_urun_artirma.md): Kc, height,
+        root depth and p of the FAO-56 barley row are used for rye (another small grain).
+
+  # -------------------------------------------------------- legumes (Fabaceae)
+  - id: chickpea
+    name: {en: Chickpea, tr: Nohut}
+    scientific: Cicer arietinum
+    family: Fabaceae
+    group: legume
+    nitrogen_fixing: true
+    fao56:
+      row: Chick pea
+      kc_ini: 0.4
+      kc_ini_from_group: true
+      kc_mid: 1.00
+      kc_end: 0.35
+      max_height_m: 0.4
+      root_depth_m: [0.6, 1.0]
+      depletion_p: 0.50
+
+  - id: lentil
+    name: {en: Lentil, tr: Mercimek}
+    scientific: Lens culinaris
+    family: Fabaceae
+    group: legume
+    nitrogen_fixing: true
+    fao56:
+      row: Lentil
+      kc_ini: 0.4
+      kc_ini_from_group: true
+      kc_mid: 1.10
+      kc_end: 0.30
+      max_height_m: 0.5
+      root_depth_m: [0.6, 0.8]
+      depletion_p: 0.50
+
+  - id: dry_bean
+    name: {en: Dry bean, tr: Kuru fasulye}
+    scientific: Phaseolus vulgaris
+    family: Fabaceae
+    group: legume
+    nitrogen_fixing: true
+    fao56:
+      row: Beans, dry and Pulses
+      kc_ini: 0.4
+      kc_mid: 1.15
+      kc_end: 0.35
+      max_height_m: 0.4
+      root_depth_m: [0.6, 0.9]
+      depletion_p: 0.45
+
+  - id: faba_bean
+    name: {en: Faba bean (dry), tr: Bakla (kuru)}
+    scientific: Vicia faba
+    family: Fabaceae
+    group: legume
+    nitrogen_fixing: true
+    fao56:
+      row: Fababean (broad bean) - Dry/Seed
+      kc_ini: 0.5
+      kc_mid: 1.15
+      kc_end: 0.30
+      max_height_m: 0.8
+      root_depth_m: [0.5, 0.7]
+      depletion_p: 0.45
+
+  - id: dry_pea
+    name: {en: Field pea (dry), tr: Kuru bezelye}
+    scientific: Pisum sativum
+    family: Fabaceae
+    group: legume
+    nitrogen_fixing: true
+    fao56:
+      row: Peas - Dry/Seed
+      kc_ini: 0.4
+      kc_ini_from_group: true
+      kc_mid: 1.15
+      kc_end: 0.30
+      max_height_m: 0.5
+      root_depth_m: [0.6, 1.0]
+      depletion_p: 0.40
+
+  - id: soybean
+    name: {en: Soybean, tr: Soya fasulyesi}
+    scientific: Glycine max
+    family: Fabaceae
+    group: legume
+    nitrogen_fixing: true
+    fao56:
+      row: Soybeans
+      kc_ini: 0.4
+      kc_ini_from_group: true
+      kc_mid: 1.15
+      kc_end: 0.50
+      max_height_m: [0.5, 1.0]
+      root_depth_m: [0.6, 1.3]
+      depletion_p: 0.50
+
+  - id: groundnut
+    name: {en: Groundnut (peanut), tr: Yer fıstığı}
+    scientific: Arachis hypogaea
+    family: Fabaceae
+    group: legume
+    nitrogen_fixing: true
+    fao56:
+      row: Groundnut (Peanut)
+      kc_ini: 0.4
+      kc_ini_from_group: true
+      kc_mid: 1.15
+      kc_end: 0.60
+      max_height_m: 0.4
+      root_depth_m: [0.5, 1.0]
+      depletion_p: 0.50
+
+  - id: cowpea
+    name: {en: Cowpea, tr: Börülce}
+    scientific: Vigna unguiculata
+    family: Fabaceae
+    group: legume
+    nitrogen_fixing: true
+    fao56:
+      row: Green Gram and Cowpeas
+      kc_ini: 0.4
+      kc_ini_from_group: true
+      kc_mid: 1.05
+      kc_end: [0.35, 0.60]
+      max_height_m: 0.4
+      root_depth_m: [0.6, 1.0]
+      depletion_p: 0.45
+
+  - id: alfalfa
+    name: {en: Alfalfa (hay), tr: Yonca}
+    scientific: Medicago sativa
+    family: Fabaceae
+    group: forage
+    perennial: true
+    nitrogen_fixing: true
+    fao56:
+      row: Alfalfa Hay - averaged cutting effects
+      kc_ini: 0.40
+      kc_mid: 0.95
+      kc_end: 0.90
+      max_height_m: 0.7
+      root_depth_m: [1.0, 2.0]   # Table 22 "Alfalfa - for hay"
+      depletion_p: 0.55
+
+  - id: berseem_clover
+    name: {en: Berseem clover, tr: İskenderiye üçgülü}
+    scientific: Trifolium alexandrinum
+    family: Fabaceae
+    group: forage
+    nitrogen_fixing: true
+    fao56:
+      row: Clover hay, Berseem - averaged cutting effects
+      kc_ini: 0.40
+      kc_mid: 0.90
+      kc_end: 0.85
+      max_height_m: 0.6
+      root_depth_m: [0.6, 0.9]
+      depletion_p: 0.50
+
+  - id: vetch
+    name: {en: Vetch (cover), tr: Fiğ (örtü)}
+    scientific: Vicia sativa
+    family: Fabaceae
+    group: cover
+    nitrogen_fixing: true
+    fao56: null   # not listed in FAO-56 Table 12/22 — needs another source
+
+  # ---------------------------------------------------------------- oil & fibre
+  - id: sunflower
+    name: {en: Sunflower, tr: Ayçiçeği}
+    scientific: Helianthus annuus
+    family: Asteraceae
+    group: oilseed
+    nitrogen_fixing: false
+    fao56:
+      row: Sunflower
+      kc_ini: 0.35
+      kc_ini_from_group: true
+      kc_mid: [1.0, 1.15]
+      kc_end: 0.35
+      max_height_m: 2.0
+      root_depth_m: [0.8, 1.5]
+      depletion_p: 0.45
+
+  - id: rapeseed
+    name: {en: Rapeseed / canola, tr: Kolza / kanola}
+    scientific: Brassica napus
+    family: Brassicaceae
+    group: oilseed
+    nitrogen_fixing: false
+    fao56:
+      row: Rapeseed, Canola
+      kc_ini: 0.35
+      kc_ini_from_group: true
+      kc_mid: [1.0, 1.15]
+      kc_end: 0.35
+      max_height_m: 0.6
+      root_depth_m: [1.0, 1.5]
+      depletion_p: 0.60
+
+  - id: safflower
+    name: {en: Safflower, tr: Aspir}
+    scientific: Carthamus tinctorius
+    family: Asteraceae
+    group: oilseed
+    nitrogen_fixing: false
+    fao56:
+      row: Safflower
+      kc_ini: 0.35
+      kc_ini_from_group: true
+      kc_mid: [1.0, 1.15]
+      kc_end: 0.25
+      max_height_m: 0.8
+      root_depth_m: [1.0, 2.0]
+      depletion_p: 0.60
+
+  - id: sesame
+    name: {en: Sesame, tr: Susam}
+    scientific: Sesamum indicum
+    family: Pedaliaceae
+    group: oilseed
+    nitrogen_fixing: false
+    fao56:
+      row: Sesame
+      kc_ini: 0.35
+      kc_ini_from_group: true
+      kc_mid: 1.10
+      kc_end: 0.25
+      max_height_m: 1.0
+      root_depth_m: [1.0, 1.5]
+      depletion_p: 0.60
+
+  - id: flax
+    name: {en: Flax / linseed, tr: Keten}
+    scientific: Linum usitatissimum
+    family: Linaceae
+    group: oilseed
+    nitrogen_fixing: false
+    fao56:
+      row: Flax
+      kc_ini: 0.35
+      kc_ini_from_group: true   # fibre-crop group value
+      kc_mid: 1.10
+      kc_end: 0.25
+      max_height_m: 1.2
+      root_depth_m: [1.0, 1.5]
+      depletion_p: 0.50
+
+  - id: cotton
+    name: {en: Cotton, tr: Pamuk}
+    scientific: Gossypium hirsutum
+    family: Malvaceae
+    group: fibre
+    nitrogen_fixing: false
+    fao56:
+      row: Cotton
+      kc_ini: 0.35
+      kc_ini_from_group: true
+      kc_mid: [1.15, 1.20]
+      kc_end: [0.50, 0.70]
+      max_height_m: [1.2, 1.5]
+      root_depth_m: [1.0, 1.7]
+      depletion_p: 0.65
+
+  - id: mustard
+    name: {en: Mustard (cover), tr: Hardal (örtü)}
+    scientific: Sinapis alba
+    family: Brassicaceae
+    group: cover
+    nitrogen_fixing: false
+    fao56: null   # not listed in FAO-56 Table 12/22 — needs another source
+
+  # ---------------------------------------------------------------- roots & tubers
+  - id: potato
+    name: {en: Potato, tr: Patates}
+    scientific: Solanum tuberosum
+    family: Solanaceae
+    group: root_tuber
+    nitrogen_fixing: false
+    fao56:
+      row: Potato
+      kc_ini: 0.5
+      kc_ini_from_group: true
+      kc_mid: 1.15
+      kc_end: 0.75
+      max_height_m: 0.6
+      root_depth_m: [0.4, 0.6]
+      depletion_p: 0.35
+
+  - id: sweet_potato
+    name: {en: Sweet potato, tr: Tatlı patates}
+    scientific: Ipomoea batatas
+    family: Convolvulaceae
+    group: root_tuber
+    nitrogen_fixing: false
+    fao56:
+      row: Sweet Potato
+      kc_ini: 0.5
+      kc_ini_from_group: true
+      kc_mid: 1.15
+      kc_end: 0.65
+      max_height_m: 0.4
+      root_depth_m: [1.0, 1.5]
+      depletion_p: 0.65
+
+  - id: cassava
+    name: {en: Cassava, tr: Manyok}
+    scientific: Manihot esculenta
+    family: Euphorbiaceae
+    group: root_tuber
+    nitrogen_fixing: false
+    fao56:
+      row: Cassava - year 1
+      kc_ini: 0.3
+      kc_mid: 0.80
+      kc_end: 0.30
+      max_height_m: 1.0
+      root_depth_m: [0.5, 0.8]
+      depletion_p: 0.35
+
+  - id: sugar_beet
+    name: {en: Sugar beet, tr: Şeker pancarı}
+    scientific: Beta vulgaris
+    family: Amaranthaceae   # APG IV (formerly Chenopodiaceae)
+    group: root_tuber
+    nitrogen_fixing: false
+    fao56:
+      row: Sugar Beet
+      kc_ini: 0.35
+      kc_mid: 1.20
+      kc_end: 0.70
+      max_height_m: 0.5
+      root_depth_m: [0.7, 1.2]
+      depletion_p: 0.55
+
+  # ---------------------------------------------------------------- forage & cover
+  - id: ryegrass
+    name: {en: Ryegrass (hay), tr: Çim (Lolium)}
+    scientific: Lolium multiflorum
+    family: Poaceae
+    group: forage
+    nitrogen_fixing: false
+    fao56:
+      row: Rye Grass hay - averaged cutting effects
+      kc_ini: 0.95
+      kc_mid: 1.05
+      kc_end: 1.00
+      max_height_m: 0.3
+      root_depth_m: [0.6, 1.0]
+      depletion_p: 0.60
+
+  - id: sudan_grass
+    name: {en: Sudan grass (hay), tr: Sudan otu}
+    scientific: Sorghum × drummondii
+    family: Poaceae
+    group: forage
+    nitrogen_fixing: false
+    fao56:
+      row: Sudan Grass hay (annual) - averaged cutting effects
+      kc_ini: 0.50
+      kc_mid: 0.90
+      kc_end: 0.85
+      max_height_m: 1.2
+      root_depth_m: [1.0, 1.5]
+      depletion_p: 0.55
+
+  - id: phacelia
+    name: {en: Phacelia (cover), tr: Facelya (örtü)}
+    scientific: Phacelia tanacetifolia
+    family: Boraginaceae   # APG IV (formerly Hydrophyllaceae)
+    group: cover
+    nitrogen_fixing: false
+    fao56: null   # not listed in FAO-56 Table 12/22 — needs another source
+
+  - id: buckwheat
+    name: {en: Buckwheat, tr: Karabuğday}
+    scientific: Fagopyrum esculentum
+    family: Polygonaceae
+    group: cover
+    nitrogen_fixing: false
+    fao56: null   # not listed in FAO-56 Table 12/22 — needs another source
+
+  # ---------------------------------------------------------------- vegetables (added 2026-11-13)
+  # FAO-56 values copied from data/fao56_table12_22.yaml (scripts/extract_fao56_table12_22.py).
+  # Families from botanical knowledge (APG IV), to verify against POWO like the rest.
+  - id: tomato
+    name: {en: Tomato, tr: Domates}
+    scientific: Solanum lycopersicum
+    family: Solanaceae
+    group: vegetable
+    nitrogen_fixing: false
+    fao56:
+      row: "Tomato"
+      kc_ini: 0.6
+      kc_ini_from_group: true
+      kc_mid: 1.15
+      kc_end: [0.7, 0.9]
+      max_height_m: 0.6
+      root_depth_m: [0.7, 1.5]
+      depletion_p: 0.4
+
+  - id: onion
+    name: {en: Onion (dry), tr: Kuru soğan}
+    scientific: Allium cepa
+    family: Amaryllidaceae
+    group: vegetable
+    nitrogen_fixing: false
+    fao56:
+      row: "Onions - dry"
+      kc_ini: 0.7
+      kc_ini_from_group: true
+      kc_mid: 1.05
+      kc_end: 0.75
+      max_height_m: 0.4
+      root_depth_m: [0.3, 0.6]
+      depletion_p: 0.3
+
+  - id: cabbage
+    name: {en: Cabbage, tr: Lahana}
+    scientific: Brassica oleracea var. capitata
+    family: Brassicaceae
+    group: vegetable
+    nitrogen_fixing: false
+    fao56:
+      row: "Cabbage"
+      kc_ini: 0.7
+      kc_ini_from_group: true
+      kc_mid: 1.05
+      kc_end: 0.95
+      max_height_m: 0.4
+      root_depth_m: [0.5, 0.8]
+      depletion_p: 0.45
+
+  - id: carrot
+    name: {en: Carrot, tr: Havuç}
+    scientific: Daucus carota
+    family: Apiaceae
+    group: vegetable
+    nitrogen_fixing: false
+    fao56:
+      row: "Carrots"
+      kc_ini: 0.7
+      kc_ini_from_group: true
+      kc_mid: 1.05
+      kc_end: 0.95
+      max_height_m: 0.3
+      root_depth_m: [0.5, 1.0]
+      depletion_p: 0.35
+
+  - id: cucumber
+    name: {en: Cucumber, tr: Hıyar}
+    scientific: Cucumis sativus
+    family: Cucurbitaceae
+    group: vegetable
+    nitrogen_fixing: false
+    fao56:
+      row: "Cucumber - Fresh Market"
+      kc_ini: 0.6
+      kc_mid: 1.0
+      kc_end: 0.75
+      max_height_m: 0.3
+      root_depth_m: [0.7, 1.2]
+      depletion_p: 0.5
+
+  - id: watermelon
+    name: {en: Watermelon, tr: Karpuz}
+    scientific: Citrullus lanatus
+    family: Cucurbitaceae
+    group: vegetable
+    nitrogen_fixing: false
+    fao56:
+      row: "Watermelon"
+      kc_ini: 0.4
+      kc_mid: 1.0
+      kc_end: 0.75
+      max_height_m: 0.4
+      root_depth_m: [0.8, 1.5]
+      depletion_p: 0.4
+
+  - id: melon
+    name: {en: Melon, tr: Kavun}
+    scientific: Cucumis melo
+    family: Cucurbitaceae
+    group: vegetable
+    nitrogen_fixing: false
+    fao56:
+      row: "Sweet Melons"
+      kc_ini: 0.5
+      kc_ini_from_group: true
+      kc_mid: 1.05
+      kc_end: 0.75
+      max_height_m: 0.4
+      root_depth_m: [0.8, 1.5]
+      depletion_p: 0.4
+
+  - id: sweet_pepper
+    name: {en: Sweet pepper, tr: Biber}
+    scientific: Capsicum annuum
+    family: Solanaceae
+    group: vegetable
+    nitrogen_fixing: false
+    fao56:
+      row: "Sweet Peppers (bell)"
+      kc_ini: 0.6
+      kc_ini_from_group: true
+      kc_mid: 1.05
+      kc_end: 0.9
+      max_height_m: 0.7
+      root_depth_m: [0.5, 1.0]
+      depletion_p: 0.3
+
+  - id: eggplant
+    name: {en: Eggplant, tr: Patlıcan}
+    scientific: Solanum melongena
+    family: Solanaceae
+    group: vegetable
+    nitrogen_fixing: false
+    fao56:
+      row: "Egg Plant"
+      kc_ini: 0.6
+      kc_ini_from_group: true
+      kc_mid: 1.05
+      kc_end: 0.9
+      max_height_m: 0.8
+      root_depth_m: [0.7, 1.2]
+      depletion_p: 0.45
+
+  - id: lettuce
+    name: {en: Lettuce, tr: Marul}
+    scientific: Lactuca sativa
+    family: Asteraceae
+    group: vegetable
+    nitrogen_fixing: false
+    fao56:
+      row: "Lettuce"
+      kc_ini: 0.7
+      kc_ini_from_group: true
+      kc_mid: 1.0
+      kc_end: 0.95
+      max_height_m: 0.3
+      root_depth_m: [0.3, 0.5]
+      depletion_p: 0.3
+
+  - id: spinach
+    name: {en: Spinach, tr: Ispanak}
+    scientific: Spinacia oleracea
+    family: Amaranthaceae
+    group: vegetable
+    nitrogen_fixing: false
+    fao56:
+      row: "Spinach"
+      kc_ini: 0.7
+      kc_ini_from_group: true
+      kc_mid: 1.0
+      kc_end: 0.95
+      max_height_m: 0.3
+      root_depth_m: [0.3, 0.5]
+      depletion_p: 0.2
+
+  - id: pumpkin
+    name: {en: Pumpkin / winter squash, tr: Bal kabağı}
+    scientific: Cucurbita maxima
+    family: Cucurbitaceae
+    group: vegetable
+    nitrogen_fixing: false
+    fao56:
+      row: "Pumpkin, Winter Squash"
+      kc_ini: 0.5
+      kc_ini_from_group: true
+      kc_mid: 1.0
+      kc_end: 0.8
+      max_height_m: 0.4
+      root_depth_m: [1.0, 1.5]
+      depletion_p: 0.35
+
+  - id: radish
+    name: {en: Radish, tr: Turp}
+    scientific: Raphanus sativus
+    family: Brassicaceae
+    group: vegetable
+    nitrogen_fixing: false
+    fao56:
+      row: "Radish"   # Table 22 row: "Radishes"
+      kc_ini: 0.7
+      kc_ini_from_group: true
+      kc_mid: 0.9
+      kc_end: 0.85
+      max_height_m: 0.3
+      root_depth_m: [0.3, 0.5]
+      depletion_p: 0.3
+
+  - id: green_bean
+    name: {en: Green bean, tr: Taze fasulye}
+    scientific: Phaseolus vulgaris
+    family: Fabaceae
+    group: legume
+    nitrogen_fixing: true
+    fao56:
+      row: "Beans, green"
+      kc_ini: 0.5
+      kc_mid: 1.05
+      kc_end: 0.9
+      max_height_m: 0.4
+      root_depth_m: [0.5, 0.7]
+      depletion_p: 0.45
+
+  - id: mung_bean
+    name: {en: Mung bean, tr: Maş fasulyesi}
+    scientific: Vigna radiata
+    family: Fabaceae
+    group: legume
+    nitrogen_fixing: true
+    fao56:
+      row: "Green Gram and Cowpeas"
+      kc_ini: 0.4
+      kc_ini_from_group: true
+      kc_mid: 1.05
+      kc_end: [0.35, 0.6]
+      max_height_m: 0.4
+      root_depth_m: [0.6, 1.0]
+      depletion_p: 0.45

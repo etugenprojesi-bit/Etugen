@@ -1,0 +1,1695 @@
+source:
+  citation: 'Allen, R.G., Pereira, L.S., Raes, D., Smith, M. (1998). FAO Irrigation and Drainage Paper
+    56, Table 11: Lengths of crop development stages (days).'
+  url: https://www.fao.org/4/X0490E/x0490e0b.htm
+  generated_by: scripts/extract_fao56_table11.py
+  note: Day counts are indicative for the listed planting date and region; 'a/b' values are stored as
+    [a, b]. Planting/region text may wrap across rows in the original table.
+rows:
+- group: a. Small Vegetables
+  crop: Broccoli
+  init: 35.0
+  dev: 45.0
+  mid: 40.0
+  late: 15.0
+  total: 135.0
+  planting: Sept
+  region: Calif. Desert, USA
+  raw: 35 | 45 | 40 | 15 | 135 | Sept | Calif. Desert, USA
+- group: a. Small Vegetables
+  crop: Cabbage
+  init: 40.0
+  dev: 60.0
+  mid: 50.0
+  late: 15.0
+  total: 165.0
+  planting: Sept
+  region: Calif. Desert, USA
+  raw: 40 | 60 | 50 | 15 | 165 | Sept | Calif. Desert, USA
+- group: a. Small Vegetables
+  crop: Carrots
+  init: 20.0
+  dev: 30.0
+  mid:
+  - 50.0
+  - 30.0
+  late: 20.0
+  total: 100.0
+  planting: Oct/Jan
+  region: Arid climate
+  raw: 20 | 30 | 50/30 | 20 | 100 | Oct/Jan | Arid climate
+- group: a. Small Vegetables
+  crop: Carrots
+  init: 30.0
+  dev: 40.0
+  mid: 60.0
+  late: 20.0
+  total: 150.0
+  planting: Feb/Mar
+  region: Mediterranean
+  raw: 30 | 40 | 60 | 20 | 150 | Feb/Mar | Mediterranean
+- group: a. Small Vegetables
+  crop: Carrots
+  init: 30.0
+  dev: 50.0
+  mid: 90.0
+  late: 30.0
+  total: 200.0
+  planting: Oct
+  region: Calif. Desert, USA
+  raw: 30 | 50 | 90 | 30 | 200 | Oct | Calif. Desert, USA
+- group: a. Small Vegetables
+  crop: Cauliflower
+  init: 35.0
+  dev: 50.0
+  mid: 40.0
+  late: 15.0
+  total: 140.0
+  planting: Sept
+  region: Calif. Desert, USA
+  raw: 35 | 50 | 40 | 15 | 140 | Sept | Calif. Desert, USA
+- group: a. Small Vegetables
+  crop: Celery
+  init: 25.0
+  dev: 40.0
+  mid: 95.0
+  late: 20.0
+  total: 180.0
+  planting: Oct
+  region: (Semi) Arid
+  raw: 25 | 40 | 95 | 20 | 180 | Oct | (Semi) Arid
+- group: a. Small Vegetables
+  crop: Celery
+  init: 25.0
+  dev: 40.0
+  mid: 45.0
+  late: 15.0
+  total: 125.0
+  planting: April
+  region: Mediterranean
+  raw: 25 | 40 | 45 | 15 | 125 | April | Mediterranean
+- group: a. Small Vegetables
+  crop: Celery
+  init: 30.0
+  dev: 55.0
+  mid: 105.0
+  late: 20.0
+  total: 210.0
+  planting: Jan
+  region: (Semi) Arid
+  raw: 30 | 55 | 105 | 20 | 210 | Jan | (Semi) Arid
+- group: a. Small Vegetables
+  crop: Crucifers
+  init: 20.0
+  dev: 30.0
+  mid: 20.0
+  late: 10.0
+  total: 80.0
+  planting: April
+  region: Mediterranean
+  raw: 20 | 30 | 20 | 10 | 80 | April | Mediterranean
+- group: a. Small Vegetables
+  crop: Crucifers
+  init: 25.0
+  dev: 35.0
+  mid: 25.0
+  late: 10.0
+  total: 95.0
+  planting: February
+  region: Mediterranean
+  raw: 25 | 35 | 25 | 10 | 95 | February | Mediterranean
+- group: a. Small Vegetables
+  crop: Crucifers
+  init: 30.0
+  dev: 35.0
+  mid: 90.0
+  late: 40.0
+  total: 195.0
+  planting: Oct/Nov
+  region: Mediterranean
+  raw: 30 | 35 | 90 | 40 | 195 | Oct/Nov | Mediterranean
+- group: a. Small Vegetables
+  crop: Lettuce
+  init: 20.0
+  dev: 30.0
+  mid: 15.0
+  late: 10.0
+  total: 75.0
+  planting: April
+  region: Mediterranean
+  raw: 20 | 30 | 15 | 10 | 75 | April | Mediterranean
+- group: a. Small Vegetables
+  crop: Lettuce
+  init: 30.0
+  dev: 40.0
+  mid: 25.0
+  late: 10.0
+  total: 105.0
+  planting: Nov/Jan
+  region: Mediterranean
+  raw: 30 | 40 | 25 | 10 | 105 | Nov/Jan | Mediterranean
+- group: a. Small Vegetables
+  crop: Lettuce
+  init: 25.0
+  dev: 35.0
+  mid: 30.0
+  late: 10.0
+  total: 100.0
+  planting: Oct/Nov
+  region: Arid Region
+  raw: 25 | 35 | 30 | 10 | 100 | Oct/Nov | Arid Region
+- group: a. Small Vegetables
+  crop: Lettuce
+  init: 35.0
+  dev: 50.0
+  mid: 45.0
+  late: 10.0
+  total: 140.0
+  planting: Feb
+  region: Mediterranean
+  raw: 35 | 50 | 45 | 10 | 140 | Feb | Mediterranean
+- group: a. Small Vegetables
+  crop: Onion (dry)
+  init: 15.0
+  dev: 25.0
+  mid: 70.0
+  late: 40.0
+  total: 150.0
+  planting: April
+  region: Mediterranean
+  raw: 15 | 25 | 70 | 40 | 150 | April | Mediterranean
+- group: a. Small Vegetables
+  crop: Onion (dry)
+  init: 20.0
+  dev: 35.0
+  mid: 110.0
+  late: 45.0
+  total: 210.0
+  planting: Oct; Jan.
+  region: Arid Region; Calif.
+  raw: 20 | 35 | 110 | 45 | 210 | Oct; Jan. | Arid Region; Calif.
+- group: a. Small Vegetables
+  crop: Onion (green)
+  init: 25.0
+  dev: 30.0
+  mid: 10.0
+  late: 5.0
+  total: 70.0
+  planting: April/May
+  region: Mediterranean
+  raw: 25 | 30 | 10 | 5 | 70 | April/May | Mediterranean
+- group: a. Small Vegetables
+  crop: Onion (green)
+  init: 20.0
+  dev: 45.0
+  mid: 20.0
+  late: 10.0
+  total: 95.0
+  planting: October
+  region: Arid Region
+  raw: 20 | 45 | 20 | 10 | 95 | October | Arid Region
+- group: a. Small Vegetables
+  crop: Onion (green)
+  init: 30.0
+  dev: 55.0
+  mid: 55.0
+  late: 40.0
+  total: 180.0
+  planting: March
+  region: Calif., USA
+  raw: 30 | 55 | 55 | 40 | 180 | March | Calif., USA
+- group: a. Small Vegetables
+  crop: Onion (seed)
+  init: 20.0
+  dev: 45.0
+  mid: 165.0
+  late: 45.0
+  total: 275.0
+  planting: Sept
+  region: Calif. Desert, USA
+  raw: 20 | 45 | 165 | 45 | 275 | Sept | Calif. Desert, USA
+- group: a. Small Vegetables
+  crop: Spinach
+  init: 20.0
+  dev: 20.0
+  mid:
+  - 15.0
+  - 25.0
+  late: 5.0
+  total:
+  - 60.0
+  - 70.0
+  planting: Apr; Sep/Oct
+  region: Mediterranean
+  raw: 20 | 20 | 15/25 | 5 | 60/70 | Apr; Sep/Oct | Mediterranean
+- group: a. Small Vegetables
+  crop: Spinach
+  init: 20.0
+  dev: 30.0
+  mid: 40.0
+  late: 10.0
+  total: 100.0
+  planting: November
+  region: Arid Region
+  raw: 20 | 30 | 40 | 10 | 100 | November | Arid Region
+- group: a. Small Vegetables
+  crop: Radish
+  init: 5.0
+  dev: 10.0
+  mid: 15.0
+  late: 5.0
+  total: 35.0
+  planting: Mar/Apr
+  region: Medit.; Europe
+  raw: 5 | 10 | 15 | 5 | 35 | Mar/Apr | Medit.; Europe
+- group: a. Small Vegetables
+  crop: Radish
+  init: 10.0
+  dev: 10.0
+  mid: 15.0
+  late: 5.0
+  total: 40.0
+  planting: Winter
+  region: Arid Region
+  raw: 10 | 10 | 15 | 5 | 40 | Winter | Arid Region
+- group: b. Vegetables - Solanum Family (Solanaceae)
+  crop: Egg plant
+  init: 30.0
+  dev: 40.0
+  mid: 40.0
+  late: 20.0
+  total: null
+  planting: October
+  region: Arid Region
+  raw: 30 | 40 | 40 | 20 | 130\1 | October | Arid Region
+- group: b. Vegetables - Solanum Family (Solanaceae)
+  crop: Egg plant
+  init: 30.0
+  dev: 45.0
+  mid: 40.0
+  late: 25.0
+  total: 40.0
+  planting: May/June
+  region: Mediterranean
+  raw: 30 | 45 | 40 | 25 | 40 | May/June | Mediterranean
+- group: b. Vegetables - Solanum Family (Solanaceae)
+  crop: Sweet peppers (bell)
+  init:
+  - 25.0
+  - 30.0
+  dev: 35.0
+  mid: 40.0
+  late: 20.0
+  total: 125.0
+  planting: April/June
+  region: Europe and Medit.
+  raw: 25/30 | 35 | 40 | 20 | 125 | April/June | Europe and Medit.
+- group: b. Vegetables - Solanum Family (Solanaceae)
+  crop: Sweet peppers (bell)
+  init: 30.0
+  dev: 40.0
+  mid: 110.0
+  late: 30.0
+  total: 210.0
+  planting: October
+  region: Arid Region
+  raw: 30 | 40 | 110 | 30 | 210 | October | Arid Region
+- group: b. Vegetables - Solanum Family (Solanaceae)
+  crop: Tomato
+  init: 30.0
+  dev: 40.0
+  mid: 40.0
+  late: 25.0
+  total: 135.0
+  planting: January
+  region: Arid Region
+  raw: 30 | 40 | 40 | 25 | 135 | January | Arid Region
+- group: b. Vegetables - Solanum Family (Solanaceae)
+  crop: Tomato
+  init: 35.0
+  dev: 40.0
+  mid: 50.0
+  late: 30.0
+  total: 155.0
+  planting: Apr/May
+  region: Calif., USA
+  raw: 35 | 40 | 50 | 30 | 155 | Apr/May | Calif., USA
+- group: b. Vegetables - Solanum Family (Solanaceae)
+  crop: Tomato
+  init: 25.0
+  dev: 40.0
+  mid: 60.0
+  late: 30.0
+  total: 155.0
+  planting: Jan
+  region: Calif. Desert, USA
+  raw: 25 | 40 | 60 | 30 | 155 | Jan | Calif. Desert, USA
+- group: b. Vegetables - Solanum Family (Solanaceae)
+  crop: Tomato
+  init: 35.0
+  dev: 45.0
+  mid: 70.0
+  late: 30.0
+  total: 180.0
+  planting: Oct/Nov
+  region: Arid Region
+  raw: 35 | 45 | 70 | 30 | 180 | Oct/Nov | Arid Region
+- group: b. Vegetables - Solanum Family (Solanaceae)
+  crop: Tomato
+  init: 30.0
+  dev: 40.0
+  mid: 45.0
+  late: 30.0
+  total: 145.0
+  planting: April/May
+  region: Mediterranean
+  raw: 30 | 40 | 45 | 30 | 145 | April/May | Mediterranean
+- group: c. Vegetables - Cucumber Family (Cucurbitaceae)
+  crop: Cantaloupe
+  init: 30.0
+  dev: 45.0
+  mid: 35.0
+  late: 10.0
+  total: 120.0
+  planting: Jan
+  region: Calif., USA
+  raw: 30 | 45 | 35 | 10 | 120 | Jan | Calif., USA
+- group: c. Vegetables - Cucumber Family (Cucurbitaceae)
+  crop: Cantaloupe
+  init: 10.0
+  dev: 60.0
+  mid: 25.0
+  late: 25.0
+  total: 120.0
+  planting: Aug
+  region: Calif., USA
+  raw: 10 | 60 | 25 | 25 | 120 | Aug | Calif., USA
+- group: c. Vegetables - Cucumber Family (Cucurbitaceae)
+  crop: Cucumber
+  init: 20.0
+  dev: 30.0
+  mid: 40.0
+  late: 15.0
+  total: 105.0
+  planting: June/Aug
+  region: Arid Region
+  raw: 20 | 30 | 40 | 15 | 105 | June/Aug | Arid Region
+- group: c. Vegetables - Cucumber Family (Cucurbitaceae)
+  crop: Cucumber
+  init: 25.0
+  dev: 35.0
+  mid: 50.0
+  late: 20.0
+  total: 130.0
+  planting: Nov; Feb
+  region: Arid Region
+  raw: 25 | 35 | 50 | 20 | 130 | Nov; Feb | Arid Region
+- group: c. Vegetables - Cucumber Family (Cucurbitaceae)
+  crop: Pumpkin, Winter squash
+  init: 20.0
+  dev: 30.0
+  mid: 30.0
+  late: 20.0
+  total: 100.0
+  planting: Mar, Aug
+  region: Mediterranean
+  raw: 20 | 30 | 30 | 20 | 100 | Mar, Aug | Mediterranean
+- group: c. Vegetables - Cucumber Family (Cucurbitaceae)
+  crop: Pumpkin, Winter squash
+  init: 25.0
+  dev: 35.0
+  mid: 35.0
+  late: 25.0
+  total: 120.0
+  planting: June
+  region: Europe
+  raw: 25 | 35 | 35 | 25 | 120 | June | Europe
+- group: c. Vegetables - Cucumber Family (Cucurbitaceae)
+  crop: Squash, Zucchini
+  init: 25.0
+  dev: 35.0
+  mid: 25.0
+  late: 15.0
+  total: 100.0
+  planting: Apr; Dec.
+  region: Medit.; Arid Reg.
+  raw: 25 | 35 | 25 | 15 | 100 | Apr; Dec. | Medit.; Arid Reg.
+- group: c. Vegetables - Cucumber Family (Cucurbitaceae)
+  crop: Squash, Zucchini
+  init: 20.0
+  dev: 30.0
+  mid: 25.0
+  late: 15.0
+  total: 90.0
+  planting: May/June
+  region: Medit.; Europe
+  raw: 20 | 30 | 25 | 15 | 90 | May/June | Medit.; Europe
+- group: c. Vegetables - Cucumber Family (Cucurbitaceae)
+  crop: Sweet melons
+  init: 25.0
+  dev: 35.0
+  mid: 40.0
+  late: 20.0
+  total: 120.0
+  planting: May
+  region: Mediterranean
+  raw: 25 | 35 | 40 | 20 | 120 | May | Mediterranean
+- group: c. Vegetables - Cucumber Family (Cucurbitaceae)
+  crop: Sweet melons
+  init: 30.0
+  dev: 30.0
+  mid: 50.0
+  late: 30.0
+  total: 140.0
+  planting: March
+  region: Calif., USA
+  raw: 30 | 30 | 50 | 30 | 140 | March | Calif., USA
+- group: c. Vegetables - Cucumber Family (Cucurbitaceae)
+  crop: Sweet melons
+  init: 15.0
+  dev: 40.0
+  mid: 65.0
+  late: 15.0
+  total: 135.0
+  planting: Aug
+  region: Calif. Desert, USA
+  raw: 15 | 40 | 65 | 15 | 135 | Aug | Calif. Desert, USA
+- group: c. Vegetables - Cucumber Family (Cucurbitaceae)
+  crop: Sweet melons
+  init: 30.0
+  dev: 45.0
+  mid: 65.0
+  late: 20.0
+  total: 160.0
+  planting: Dec/Jan
+  region: Arid Region
+  raw: 30 | 45 | 65 | 20 | 160 | Dec/Jan | Arid Region
+- group: c. Vegetables - Cucumber Family (Cucurbitaceae)
+  crop: Water melons
+  init: 20.0
+  dev: 30.0
+  mid: 30.0
+  late: 30.0
+  total: 110.0
+  planting: April
+  region: Italy
+  raw: 20 | 30 | 30 | 30 | 110 | April | Italy
+- group: c. Vegetables - Cucumber Family (Cucurbitaceae)
+  crop: Water melons
+  init: 10.0
+  dev: 20.0
+  mid: 20.0
+  late: 30.0
+  total: 80.0
+  planting: Mat/Aug
+  region: Near East (desert)
+  raw: 10 | 20 | 20 | 30 | 80 | Mat/Aug | Near East (desert)
+- group: d. Roots and Tubers
+  crop: Beets, table
+  init: 15.0
+  dev: 25.0
+  mid: 20.0
+  late: 10.0
+  total: 70.0
+  planting: Apr/May
+  region: Mediterranean
+  raw: 15 | 25 | 20 | 10 | 70 | Apr/May | Mediterranean
+- group: d. Roots and Tubers
+  crop: Beets, table
+  init: 25.0
+  dev: 30.0
+  mid: 25.0
+  late: 10.0
+  total: 90.0
+  planting: Feb/Mar
+  region: Mediterranean & Arid
+  raw: 25 | 30 | 25 | 10 | 90 | Feb/Mar | Mediterranean & Arid
+- group: d. Roots and Tubers
+  crop: 'Cassava: year 1'
+  init: 20.0
+  dev: 40.0
+  mid: 90.0
+  late: 60.0
+  total: 210.0
+  planting: Rainy
+  region: Tropical regions
+  raw: 20 | 40 | 90 | 60 | 210 | Rainy | Tropical regions
+- group: d. Roots and Tubers
+  crop: 'Cassava: year 2'
+  init: 150.0
+  dev: 40.0
+  mid: 110.0
+  late: 60.0
+  total: 360.0
+  planting: season
+  region: null
+  raw: '150 | 40 | 110 | 60 | 360 | season | '
+- group: d. Roots and Tubers
+  crop: Potato
+  init: 25.0
+  dev: 30.0
+  mid:
+  - 30.0
+  - 45.0
+  late: 30.0
+  total:
+  - 115.0
+  - 130.0
+  planting: Jan/Nov
+  region: (Semi) Arid Climate
+  raw: 25 | 30 | 30/45 | 30 | 115/130 | Jan/Nov | (Semi) Arid Climate
+- group: d. Roots and Tubers
+  crop: Potato
+  init: 25.0
+  dev: 30.0
+  mid: 45.0
+  late: 30.0
+  total: 130.0
+  planting: May
+  region: Continental Climate
+  raw: 25 | 30 | 45 | 30 | 130 | May | Continental Climate
+- group: d. Roots and Tubers
+  crop: Potato
+  init: 30.0
+  dev: 35.0
+  mid: 50.0
+  late: 30.0
+  total: 145.0
+  planting: April
+  region: Europe
+  raw: 30 | 35 | 50 | 30 | 145 | April | Europe
+- group: d. Roots and Tubers
+  crop: Potato
+  init: 45.0
+  dev: 30.0
+  mid: 70.0
+  late: 20.0
+  total: 165.0
+  planting: Apr/May
+  region: Idaho, USA
+  raw: 45 | 30 | 70 | 20 | 165 | Apr/May | Idaho, USA
+- group: d. Roots and Tubers
+  crop: Potato
+  init: 30.0
+  dev: 35.0
+  mid: 50.0
+  late: 25.0
+  total: 140.0
+  planting: Dec
+  region: Calif. Desert, USA
+  raw: 30 | 35 | 50 | 25 | 140 | Dec | Calif. Desert, USA
+- group: d. Roots and Tubers
+  crop: Sweet potato
+  init: 20.0
+  dev: 30.0
+  mid: 60.0
+  late: 40.0
+  total: 150.0
+  planting: April
+  region: Mediterranean
+  raw: 20 | 30 | 60 | 40 | 150 | April | Mediterranean
+- group: d. Roots and Tubers
+  crop: Sweet potato
+  init: 15.0
+  dev: 30.0
+  mid: 50.0
+  late: 30.0
+  total: 125.0
+  planting: Rainy seas.
+  region: Tropical regions
+  raw: 15 | 30 | 50 | 30 | 125 | Rainy seas. | Tropical regions
+- group: d. Roots and Tubers
+  crop: Sugarbeet
+  init: 30.0
+  dev: 45.0
+  mid: 90.0
+  late: 15.0
+  total: 180.0
+  planting: March
+  region: Calif., USA
+  raw: 30 | 45 | 90 | 15 | 180 | March | Calif., USA
+- group: d. Roots and Tubers
+  crop: Sugarbeet
+  init: 25.0
+  dev: 30.0
+  mid: 90.0
+  late: 10.0
+  total: 155.0
+  planting: June
+  region: Calif., USA
+  raw: 25 | 30 | 90 | 10 | 155 | June | Calif., USA
+- group: d. Roots and Tubers
+  crop: Sugarbeet
+  init: 25.0
+  dev: 65.0
+  mid: 100.0
+  late: 65.0
+  total: 255.0
+  planting: Sept
+  region: Calif. Desert, USA
+  raw: 25 | 65 | 100 | 65 | 255 | Sept | Calif. Desert, USA
+- group: d. Roots and Tubers
+  crop: Sugarbeet
+  init: 50.0
+  dev: 40.0
+  mid: 50.0
+  late: 40.0
+  total: 180.0
+  planting: April
+  region: Idaho, USA
+  raw: 50 | 40 | 50 | 40 | 180 | April | Idaho, USA
+- group: d. Roots and Tubers
+  crop: Sugarbeet
+  init: 25.0
+  dev: 35.0
+  mid: 50.0
+  late: 50.0
+  total: 160.0
+  planting: May
+  region: Mediterranean
+  raw: 25 | 35 | 50 | 50 | 160 | May | Mediterranean
+- group: d. Roots and Tubers
+  crop: Sugarbeet
+  init: 45.0
+  dev: 75.0
+  mid: 80.0
+  late: 30.0
+  total: 230.0
+  planting: November
+  region: Mediterranean
+  raw: 45 | 75 | 80 | 30 | 230 | November | Mediterranean
+- group: d. Roots and Tubers
+  crop: Sugarbeet
+  init: 35.0
+  dev: 60.0
+  mid: 70.0
+  late: 40.0
+  total: 205.0
+  planting: November
+  region: Arid Regions
+  raw: 35 | 60 | 70 | 40 | 205 | November | Arid Regions
+- group: e. Legumes (Leguminosae)
+  crop: Beans (green)
+  init: 20.0
+  dev: 30.0
+  mid: 30.0
+  late: 10.0
+  total: 90.0
+  planting: Feb/Mar
+  region: Calif., Mediterranean
+  raw: 20 | 30 | 30 | 10 | 90 | Feb/Mar | Calif., Mediterranean
+- group: e. Legumes (Leguminosae)
+  crop: Beans (green)
+  init: 15.0
+  dev: 25.0
+  mid: 25.0
+  late: 10.0
+  total: 75.0
+  planting: Aug/Sep
+  region: Calif., Egypt, Lebanon
+  raw: 15 | 25 | 25 | 10 | 75 | Aug/Sep | Calif., Egypt, Lebanon
+- group: e. Legumes (Leguminosae)
+  crop: Beans (dry)
+  init: 20.0
+  dev: 30.0
+  mid: 40.0
+  late: 20.0
+  total: 110.0
+  planting: May/June
+  region: Continental Climates
+  raw: 20 | 30 | 40 | 20 | 110 | May/June | Continental Climates
+- group: e. Legumes (Leguminosae)
+  crop: Beans (dry)
+  init: 15.0
+  dev: 25.0
+  mid: 35.0
+  late: 20.0
+  total: 95.0
+  planting: June
+  region: Pakistan, Calif.
+  raw: 15 | 25 | 35 | 20 | 95 | June | Pakistan, Calif.
+- group: e. Legumes (Leguminosae)
+  crop: Beans (dry)
+  init: 25.0
+  dev: 25.0
+  mid: 30.0
+  late: 20.0
+  total: 100.0
+  planting: June
+  region: Idaho, USA
+  raw: 25 | 25 | 30 | 20 | 100 | June | Idaho, USA
+- group: e. Legumes (Leguminosae)
+  crop: Faba bean, broad bean
+  init: 15.0
+  dev: 25.0
+  mid: 35.0
+  late: 15.0
+  total: 90.0
+  planting: May
+  region: Europe
+  raw: 15 | 25 | 35 | 15 | 90 | May | Europe
+- group: e. Legumes (Leguminosae)
+  crop: Faba bean, broad bean
+  init: 20.0
+  dev: 30.0
+  mid: 35.0
+  late: 15.0
+  total: 100.0
+  planting: Mar/Apr
+  region: Mediterranean
+  raw: 20 | 30 | 35 | 15 | 100 | Mar/Apr | Mediterranean
+- group: e. Legumes (Leguminosae)
+  crop: Faba bean, broad bean - dry
+  init: 90.0
+  dev: 45.0
+  mid: 40.0
+  late: 60.0
+  total: 235.0
+  planting: Nov
+  region: Europe
+  raw: 90 | 45 | 40 | 60 | 235 | Nov | Europe
+- group: e. Legumes (Leguminosae)
+  crop: Faba bean, broad bean - green
+  init: 90.0
+  dev: 45.0
+  mid: 40.0
+  late: 0.0
+  total: 175.0
+  planting: Nov
+  region: Europe
+  raw: 90 | 45 | 40 | 0 | 175 | Nov | Europe
+- group: e. Legumes (Leguminosae)
+  crop: Green gram, cowpeas
+  init: 20.0
+  dev: 30.0
+  mid: 30.0
+  late: 20.0
+  total: 110.0
+  planting: March
+  region: Mediterranean
+  raw: 20 | 30 | 30 | 20 | 110 | March | Mediterranean
+- group: e. Legumes (Leguminosae)
+  crop: Groundnut
+  init: 25.0
+  dev: 35.0
+  mid: 45.0
+  late: 25.0
+  total: 130.0
+  planting: Dry
+  region: West Africa
+  raw: 25 | 35 | 45 | 25 | 130 | Dry | West Africa
+- group: e. Legumes (Leguminosae)
+  crop: Groundnut
+  init: 35.0
+  dev: 35.0
+  mid: 35.0
+  late: 35.0
+  total: 140.0
+  planting: season
+  region: High Latitudes
+  raw: 35 | 35 | 35 | 35 | 140 | season | High Latitudes
+- group: e. Legumes (Leguminosae)
+  crop: Groundnut
+  init: 35.0
+  dev: 45.0
+  mid: 35.0
+  late: 25.0
+  total: 140.0
+  planting: May May/June
+  region: Mediterranean
+  raw: 35 | 45 | 35 | 25 | 140 | May May/June | Mediterranean
+- group: e. Legumes (Leguminosae)
+  crop: Lentil
+  init: 20.0
+  dev: 30.0
+  mid: 60.0
+  late: 40.0
+  total: 150.0
+  planting: April
+  region: Europe
+  raw: 20 | 30 | 60 | 40 | 150 | April | Europe
+- group: e. Legumes (Leguminosae)
+  crop: Lentil
+  init: 25.0
+  dev: 35.0
+  mid: 70.0
+  late: 40.0
+  total: 170.0
+  planting: Oct/Nov
+  region: Arid Region
+  raw: 25 | 35 | 70 | 40 | 170 | Oct/Nov | Arid Region
+- group: e. Legumes (Leguminosae)
+  crop: Peas
+  init: 15.0
+  dev: 25.0
+  mid: 35.0
+  late: 15.0
+  total: 90.0
+  planting: May
+  region: Europe
+  raw: 15 | 25 | 35 | 15 | 90 | May | Europe
+- group: e. Legumes (Leguminosae)
+  crop: Peas
+  init: 20.0
+  dev: 30.0
+  mid: 35.0
+  late: 15.0
+  total: 100.0
+  planting: Mar/Apr
+  region: Mediterranean
+  raw: 20 | 30 | 35 | 15 | 100 | Mar/Apr | Mediterranean
+- group: e. Legumes (Leguminosae)
+  crop: Peas
+  init: 35.0
+  dev: 25.0
+  mid: 30.0
+  late: 20.0
+  total: 110.0
+  planting: April
+  region: Idaho, USA
+  raw: 35 | 25 | 30 | 20 | 110 | April | Idaho, USA
+- group: e. Legumes (Leguminosae)
+  crop: Soybeans
+  init: 15.0
+  dev: 15.0
+  mid: 40.0
+  late: 15.0
+  total: 85.0
+  planting: Dec
+  region: Tropics
+  raw: 15 | 15 | 40 | 15 | 85 | Dec | Tropics
+- group: e. Legumes (Leguminosae)
+  crop: Soybeans
+  init: 20.0
+  dev:
+  - 30.0
+  - 35.0
+  mid: 60.0
+  late: 25.0
+  total: 140.0
+  planting: May
+  region: Central USA
+  raw: 20 | 30/35 | 60 | 25 | 140 | May | Central USA
+- group: e. Legumes (Leguminosae)
+  crop: Soybeans
+  init: 20.0
+  dev: 25.0
+  mid: 75.0
+  late: 30.0
+  total: 150.0
+  planting: June
+  region: Japan
+  raw: 20 | 25 | 75 | 30 | 150 | June | Japan
+- group: f. Perennial Vegetables (with winter dormancy and initially bare or mulched soil)
+  crop: Artichoke
+  init: 40.0
+  dev: 40.0
+  mid: 250.0
+  late: 30.0
+  total: 360.0
+  planting: Apr (1^st yr)
+  region: California
+  raw: 40 | 40 | 250 | 30 | 360 | Apr (1^st yr) | California
+- group: f. Perennial Vegetables (with winter dormancy and initially bare or mulched soil)
+  crop: Artichoke
+  init: 20.0
+  dev: 25.0
+  mid: 250.0
+  late: 30.0
+  total: 325.0
+  planting: May (2^nd yr)
+  region: (cut in May)
+  raw: 20 | 25 | 250 | 30 | 325 | May (2^nd yr) | (cut in May)
+- group: f. Perennial Vegetables (with winter dormancy and initially bare or mulched soil)
+  crop: Asparagus
+  init: 50.0
+  dev: 30.0
+  mid: 100.0
+  late: 50.0
+  total: 230.0
+  planting: Feb
+  region: Warm Winter
+  raw: 50 | 30 | 100 | 50 | 230 | Feb | Warm Winter
+- group: f. Perennial Vegetables (with winter dormancy and initially bare or mulched soil)
+  crop: Asparagus
+  init: 90.0
+  dev: 30.0
+  mid: 200.0
+  late: 45.0
+  total: 365.0
+  planting: Feb
+  region: Mediterranean
+  raw: 90 | 30 | 200 | 45 | 365 | Feb | Mediterranean
+- group: g. Fibre Crops
+  crop: Cotton
+  init: 30.0
+  dev: 50.0
+  mid: 60.0
+  late: 55.0
+  total: 195.0
+  planting: Mar-May
+  region: Egypt; Pakistan; Calif.
+  raw: 30 | 50 | 60 | 55 | 195 | Mar-May | Egypt; Pakistan; Calif.
+- group: g. Fibre Crops
+  crop: Cotton
+  init: 45.0
+  dev: 90.0
+  mid: 45.0
+  late: 45.0
+  total: 225.0
+  planting: Mar
+  region: Calif. Desert, USA
+  raw: 45 | 90 | 45 | 45 | 225 | Mar | Calif. Desert, USA
+- group: g. Fibre Crops
+  crop: Cotton
+  init: 30.0
+  dev: 50.0
+  mid: 60.0
+  late: 55.0
+  total: 195.0
+  planting: Sept
+  region: Yemen
+  raw: 30 | 50 | 60 | 55 | 195 | Sept | Yemen
+- group: g. Fibre Crops
+  crop: Cotton
+  init: 30.0
+  dev: 50.0
+  mid: 55.0
+  late: 45.0
+  total: 180.0
+  planting: April
+  region: Texas
+  raw: 30 | 50 | 55 | 45 | 180 | April | Texas
+- group: g. Fibre Crops
+  crop: Flax
+  init: 25.0
+  dev: 35.0
+  mid: 50.0
+  late: 40.0
+  total: 150.0
+  planting: April
+  region: Europe
+  raw: 25 | 35 | 50 | 40 | 150 | April | Europe
+- group: g. Fibre Crops
+  crop: Flax
+  init: 30.0
+  dev: 40.0
+  mid: 100.0
+  late: 50.0
+  total: 220.0
+  planting: October
+  region: Arizona
+  raw: 30 | 40 | 100 | 50 | 220 | October | Arizona
+- group: h. Oil Crops
+  crop: Castor beans
+  init: 25.0
+  dev: 40.0
+  mid: 65.0
+  late: 50.0
+  total: 180.0
+  planting: March
+  region: (Semi) Arid Climates
+  raw: 25 | 40 | 65 | 50 | 180 | March | (Semi) Arid Climates
+- group: h. Oil Crops
+  crop: Castor beans
+  init: 20.0
+  dev: 40.0
+  mid: 50.0
+  late: 25.0
+  total: 135.0
+  planting: Nov.
+  region: Indonesia
+  raw: 20 | 40 | 50 | 25 | 135 | Nov. | Indonesia
+- group: h. Oil Crops
+  crop: Safflower
+  init: 20.0
+  dev: 35.0
+  mid: 45.0
+  late: 25.0
+  total: 125.0
+  planting: April
+  region: California, USA
+  raw: 20 | 35 | 45 | 25 | 125 | April | California, USA
+- group: h. Oil Crops
+  crop: Safflower
+  init: 25.0
+  dev: 35.0
+  mid: 55.0
+  late: 30.0
+  total: 145.0
+  planting: Mar
+  region: High Latitudes
+  raw: 25 | 35 | 55 | 30 | 145 | Mar | High Latitudes
+- group: h. Oil Crops
+  crop: Safflower
+  init: 35.0
+  dev: 55.0
+  mid: 60.0
+  late: 40.0
+  total: 190.0
+  planting: Oct/Nov
+  region: Arid Region
+  raw: 35 | 55 | 60 | 40 | 190 | Oct/Nov | Arid Region
+- group: h. Oil Crops
+  crop: Sesame
+  init: 20.0
+  dev: 30.0
+  mid: 40.0
+  late: 20.0
+  total: 100.0
+  planting: June
+  region: China
+  raw: 20 | 30 | 40 | 20 | 100 | June | China
+- group: h. Oil Crops
+  crop: Sunflower
+  init: 25.0
+  dev: 35.0
+  mid: 45.0
+  late: 25.0
+  total: 130.0
+  planting: April/May
+  region: Medit.; California
+  raw: 25 | 35 | 45 | 25 | 130 | April/May | Medit.; California
+- group: i. Cereals
+  crop: Barley/Oats/Wheat
+  init: 15.0
+  dev: 25.0
+  mid: 50.0
+  late: 30.0
+  total: 120.0
+  planting: November
+  region: Central India
+  raw: 15 | 25 | 50 | 30 | 120 | November | Central India
+- group: i. Cereals
+  crop: Barley/Oats/Wheat
+  init: 20.0
+  dev: 25.0
+  mid: 60.0
+  late: 30.0
+  total: 135.0
+  planting: March/Apr
+  region: 35-45 °L
+  raw: 20 | 25 | 60 | 30 | 135 | March/Apr | 35-45 °L
+- group: i. Cereals
+  crop: Barley/Oats/Wheat
+  init: 15.0
+  dev: 30.0
+  mid: 65.0
+  late: 40.0
+  total: 150.0
+  planting: July
+  region: East Africa
+  raw: 15 | 30 | 65 | 40 | 150 | July | East Africa
+- group: i. Cereals
+  crop: Barley/Oats/Wheat
+  init: 40.0
+  dev: 30.0
+  mid: 40.0
+  late: 20.0
+  total: 130.0
+  planting: Apr
+  region: null
+  raw: '40 | 30 | 40 | 20 | 130 | Apr | '
+- group: i. Cereals
+  crop: Barley/Oats/Wheat
+  init: 40.0
+  dev: 60.0
+  mid: 60.0
+  late: 40.0
+  total: 200.0
+  planting: Nov
+  region: null
+  raw: '40 | 60 | 60 | 40 | 200 | Nov | '
+- group: i. Cereals
+  crop: Barley/Oats/Wheat
+  init: 20.0
+  dev: 50.0
+  mid: 60.0
+  late: 30.0
+  total: 160.0
+  planting: Dec
+  region: Calif. Desert, USA
+  raw: 20 | 50 | 60 | 30 | 160 | Dec | Calif. Desert, USA
+- group: i. Cereals
+  crop: Winter Wheat
+  init: 20.0
+  dev: 60.0
+  mid: 70.0
+  late: 30.0
+  total: 180.0
+  planting: December
+  region: Calif., USA
+  raw: 20^2 | 60^2 | 70 | 30 | 180 | December | Calif., USA
+- group: i. Cereals
+  crop: Winter Wheat
+  init: 30.0
+  dev: 140.0
+  mid: 40.0
+  late: 30.0
+  total: 240.0
+  planting: November
+  region: Mediterranean
+  raw: 30 | 140 | 40 | 30 | 240 | November | Mediterranean
+- group: i. Cereals
+  crop: Winter Wheat
+  init: 160.0
+  dev: 75.0
+  mid: 75.0
+  late: 25.0
+  total: 335.0
+  planting: October
+  region: Idaho, USA
+  raw: 160 | 75 | 75 | 25 | 335 | October | Idaho, USA
+- group: i. Cereals
+  crop: Grains (small)
+  init: 20.0
+  dev: 30.0
+  mid: 60.0
+  late: 40.0
+  total: 150.0
+  planting: April
+  region: Mediterranean
+  raw: 20 | 30 | 60 | 40 | 150 | April | Mediterranean
+- group: i. Cereals
+  crop: Grains (small)
+  init: 25.0
+  dev: 35.0
+  mid: 65.0
+  late: 40.0
+  total: 165.0
+  planting: Oct/Nov
+  region: Pakistan; Arid Reg.
+  raw: 25 | 35 | 65 | 40 | 165 | Oct/Nov | Pakistan; Arid Reg.
+- group: i. Cereals
+  crop: Maize (grain)
+  init: 30.0
+  dev: 50.0
+  mid: 60.0
+  late: 40.0
+  total: 180.0
+  planting: April
+  region: East Africa (alt.)
+  raw: 30 | 50 | 60 | 40 | 180 | April | East Africa (alt.)
+- group: i. Cereals
+  crop: Maize (grain)
+  init: 25.0
+  dev: 40.0
+  mid: 45.0
+  late: 30.0
+  total: 140.0
+  planting: Dec/Jan
+  region: Arid Climate
+  raw: 25 | 40 | 45 | 30 | 140 | Dec/Jan | Arid Climate
+- group: i. Cereals
+  crop: Maize (grain)
+  init: 20.0
+  dev: 35.0
+  mid: 40.0
+  late: 30.0
+  total: 125.0
+  planting: June
+  region: Nigeria (humid)
+  raw: 20 | 35 | 40 | 30 | 125 | June | Nigeria (humid)
+- group: i. Cereals
+  crop: Maize (grain)
+  init: 20.0
+  dev: 35.0
+  mid: 40.0
+  late: 30.0
+  total: 125.0
+  planting: October
+  region: India (dry, cool)
+  raw: 20 | 35 | 40 | 30 | 125 | October | India (dry, cool)
+- group: i. Cereals
+  crop: Maize (grain)
+  init: 30.0
+  dev: 40.0
+  mid: 50.0
+  late: 30.0
+  total: 150.0
+  planting: April
+  region: Spain (spr, sum.); Calif.
+  raw: 30 | 40 | 50 | 30 | 150 | April | Spain (spr, sum.); Calif.
+- group: i. Cereals
+  crop: Maize (grain)
+  init: 30.0
+  dev: 40.0
+  mid: 50.0
+  late: 50.0
+  total: 170.0
+  planting: April
+  region: Idaho, USA
+  raw: 30 | 40 | 50 | 50 | 170 | April | Idaho, USA
+- group: i. Cereals
+  crop: Maize (sweet)
+  init: 20.0
+  dev: 20.0
+  mid: 30.0
+  late: 10.0
+  total: 80.0
+  planting: March
+  region: Philippines
+  raw: 20 | 20 | 30 | 10 | 80 | March | Philippines
+- group: i. Cereals
+  crop: Maize (sweet)
+  init: 20.0
+  dev: 25.0
+  mid: 25.0
+  late: 10.0
+  total: 80.0
+  planting: May/June
+  region: Mediterranean
+  raw: 20 | 25 | 25 | 10 | 80 | May/June | Mediterranean
+- group: i. Cereals
+  crop: Maize (sweet)
+  init: 20.0
+  dev: 30.0
+  mid:
+  - 50.0
+  - 30.0
+  late: 10.0
+  total: 90.0
+  planting: Oct/Dec
+  region: Arid Climate
+  raw: 20 | 30 | 50/30 | 10 | 90 | Oct/Dec | Arid Climate
+- group: i. Cereals
+  crop: Maize (sweet)
+  init: 30.0
+  dev: 30.0
+  mid: 30.0
+  late: 103.0
+  total: 110.0
+  planting: April
+  region: Idaho, USA
+  raw: 30 | 30 | 30 | 103 | 110 | April | Idaho, USA
+- group: i. Cereals
+  crop: Maize (sweet)
+  init: 20.0
+  dev: 40.0
+  mid: 70.0
+  late: 10.0
+  total: 140.0
+  planting: Jan
+  region: Calif. Desert, USA
+  raw: 20 | 40 | 70 | 10 | 140 | Jan | Calif. Desert, USA
+- group: i. Cereals
+  crop: Millet
+  init: 15.0
+  dev: 25.0
+  mid: 40.0
+  late: 25.0
+  total: 105.0
+  planting: June
+  region: Pakistan
+  raw: 15 | 25 | 40 | 25 | 105 | June | Pakistan
+- group: i. Cereals
+  crop: Millet
+  init: 20.0
+  dev: 30.0
+  mid: 55.0
+  late: 35.0
+  total: 140.0
+  planting: April
+  region: Central USA
+  raw: 20 | 30 | 55 | 35 | 140 | April | Central USA
+- group: i. Cereals
+  crop: Sorghum
+  init: 20.0
+  dev: 35.0
+  mid: 40.0
+  late: 30.0
+  total: 130.0
+  planting: May/June
+  region: USA, Pakis., Med.
+  raw: 20 | 35 | 40 | 30 | 130 | May/June | USA, Pakis., Med.
+- group: i. Cereals
+  crop: Sorghum
+  init: 20.0
+  dev: 35.0
+  mid: 45.0
+  late: 30.0
+  total: 140.0
+  planting: Mar/April
+  region: Arid Region
+  raw: 20 | 35 | 45 | 30 | 140 | Mar/April | Arid Region
+- group: i. Cereals
+  crop: Rice
+  init: 30.0
+  dev: 30.0
+  mid: 60.0
+  late: 30.0
+  total: 150.0
+  planting: Dec; May
+  region: Tropics; Mediterranean
+  raw: 30 | 30 | 60 | 30 | 150 | Dec; May | Tropics; Mediterranean
+- group: i. Cereals
+  crop: Rice
+  init: 30.0
+  dev: 30.0
+  mid: 80.0
+  late: 40.0
+  total: 180.0
+  planting: May
+  region: Tropics
+  raw: 30 | 30. | 80 | 40 | 180 | May | Tropics
+- group: j. Forages
+  crop: Alfalfa, total season
+  init: 10.0
+  dev: 30.0
+  mid: null
+  late: null
+  total: null
+  planting: null
+  region: last -4°C in spring until first -4°C in fall
+  raw: 10 | 30 | var. | var. | var. |  | last -4°C in spring until first -4°C in fall
+- group: j. Forages
+  crop: Alfalfa 1^st cutting cycle
+  init: 10.0
+  dev: 20.0
+  mid: 20.0
+  late: 10.0
+  total: 60.0
+  planting: Jan Apr (last - 4°C)
+  region: Calif., USA.
+  raw: 10 | 20 | 20 | 10 | 60 | Jan Apr (last - 4°C) | Calif., USA.
+- group: j. Forages
+  crop: Alfalfa 1^st cutting cycle
+  init: 10.0
+  dev: 30.0
+  mid: 25.0
+  late: 10.0
+  total: 75.0
+  planting: null
+  region: Idaho, USA.
+  raw: 10 | 30 | 25 | 10 | 75 |  | Idaho, USA.
+- group: j. Forages
+  crop: Alfalfa, other cutting cycles
+  init: 5.0
+  dev: 10.0
+  mid: 10.0
+  late: 5.0
+  total: 30.0
+  planting: Mar
+  region: Calif., USA.
+  raw: 5 | 10 | 10 | 5 | 30 | Mar | Calif., USA.
+- group: j. Forages
+  crop: Alfalfa, other cutting cycles
+  init: 5.0
+  dev: 20.0
+  mid: 10.0
+  late: 10.0
+  total: 45.0
+  planting: Jun
+  region: Idaho, USA.
+  raw: 5 | 20 | 10 | 10 | 45 | Jun | Idaho, USA.
+- group: j. Forages
+  crop: Bermuda for seed
+  init: 10.0
+  dev: 25.0
+  mid: 35.0
+  late: 35.0
+  total: 105.0
+  planting: March
+  region: Calif. Desert, USA
+  raw: 10 | 25 | 35 | 35 | 105 | March | Calif. Desert, USA
+- group: j. Forages
+  crop: Bermuda for hay (several cuttings)
+  init: 10.0
+  dev: 15.0
+  mid: 75.0
+  late: 35.0
+  total: 135.0
+  planting: '---'
+  region: Calif. Desert, USA
+  raw: 10 | 15 | 75 | 35 | 135 | --- | Calif. Desert, USA
+- group: j. Forages
+  crop: Grass Pasture
+  init: 10.0
+  dev: 20.0
+  mid: null
+  late: null
+  total: null
+  planting: null
+  region: 7 days before last -4°C in spring until 7 days after first -4°C in fall
+  raw: 10 | 20 | -- | -- | -- |  | 7 days before last -4°C in spring until 7 days after first -4°C in
+    fall
+- group: j. Forages
+  crop: Sudan, 1^st cutting cycle
+  init: 25.0
+  dev: 25.0
+  mid: 15.0
+  late: 10.0
+  total: 75.0
+  planting: Apr
+  region: Calif. Desert, USA
+  raw: 25 | 25 | 15 | 10 | 75 | Apr | Calif. Desert, USA
+- group: j. Forages
+  crop: Sudan, other cutting cycles
+  init: 3.0
+  dev: 15.0
+  mid: 12.0
+  late: 7.0
+  total: 37.0
+  planting: June
+  region: Calif. Desert, USA
+  raw: 3 | 15 | 12 | 7 | 37 | June | Calif. Desert, USA
+- group: k. Sugar Cane
+  crop: Sugarcane, virgin
+  init: 35.0
+  dev: 60.0
+  mid: 190.0
+  late: 120.0
+  total: 405.0
+  planting: null
+  region: Low Latitudes
+  raw: 35 | 60 | 190 | 120 | 405 |  | Low Latitudes
+- group: k. Sugar Cane
+  crop: Sugarcane, virgin
+  init: 50.0
+  dev: 70.0
+  mid: 220.0
+  late: 140.0
+  total: 480.0
+  planting: null
+  region: Tropics
+  raw: 50 | 70 | 220 | 140 | 480 |  | Tropics
+- group: k. Sugar Cane
+  crop: Sugarcane, virgin
+  init: 75.0
+  dev: 105.0
+  mid: 330.0
+  late: 210.0
+  total: 720.0
+  planting: null
+  region: Hawaii, USA
+  raw: 75 | 105 | 330 | 210 | 720 |  | Hawaii, USA
+- group: k. Sugar Cane
+  crop: Sugarcane, ratoon
+  init: 25.0
+  dev: 70.0
+  mid: 135.0
+  late: 50.0
+  total: 280.0
+  planting: null
+  region: Low Latitudes
+  raw: 25 | 70 | 135 | 50 | 280 |  | Low Latitudes
+- group: k. Sugar Cane
+  crop: Sugarcane, ratoon
+  init: 30.0
+  dev: 50.0
+  mid: 180.0
+  late: 60.0
+  total: 320.0
+  planting: null
+  region: Tropics
+  raw: 30 | 50 | 180 | 60 | 320 |  | Tropics
+- group: k. Sugar Cane
+  crop: Sugarcane, ratoon
+  init: 35.0
+  dev: 105.0
+  mid: 210.0
+  late: 70.0
+  total: 420.0
+  planting: null
+  region: Hawaii, USA
+  raw: 35 | 105 | 210 | 70 | 420 |  | Hawaii, USA
+- group: l. Tropical Fruits and Trees
+  crop: Banana, 1^st yr
+  init: 120.0
+  dev: 90.0
+  mid: 120.0
+  late: 60.0
+  total: 390.0
+  planting: Mar
+  region: Mediterranean
+  raw: 120 | 90 | 120 | 60 | 390 | Mar | Mediterranean
+- group: l. Tropical Fruits and Trees
+  crop: Banana, 2^nd yr
+  init: 120.0
+  dev: 60.0
+  mid: 180.0
+  late: 5.0
+  total: 365.0
+  planting: Feb
+  region: Mediterranean
+  raw: 120 | 60 | 180 | 5 | 365 | Feb | Mediterranean
+- group: l. Tropical Fruits and Trees
+  crop: Pineapple
+  init: 60.0
+  dev: 120.0
+  mid: 600.0
+  late: 10.0
+  total: 790.0
+  planting: null
+  region: Hawaii, USA
+  raw: 60 | 120 | 600 | 10 | 790 |  | Hawaii, USA
+- group: m. Grapes and Berries
+  crop: Grapes
+  init: 20.0
+  dev: 40.0
+  mid: 120.0
+  late: 60.0
+  total: 240.0
+  planting: April
+  region: Low Latitudes
+  raw: 20 | 40 | 120 | 60 | 240 | April | Low Latitudes
+- group: m. Grapes and Berries
+  crop: Grapes
+  init: 20.0
+  dev: 50.0
+  mid: 75.0
+  late: 60.0
+  total: 205.0
+  planting: Mar
+  region: Calif., USA
+  raw: 20 | 50 | 75 | 60 | 205 | Mar | Calif., USA
+- group: m. Grapes and Berries
+  crop: Grapes
+  init: 20.0
+  dev: 50.0
+  mid: 90.0
+  late: 20.0
+  total: 180.0
+  planting: May
+  region: High Latitudes
+  raw: 20 | 50 | 90 | 20 | 180 | May | High Latitudes
+- group: m. Grapes and Berries
+  crop: Grapes
+  init: 30.0
+  dev: 60.0
+  mid: 40.0
+  late: 80.0
+  total: 210.0
+  planting: April
+  region: Mid Latitudes (wine)
+  raw: 30 | 60 | 40 | 80 | 210 | April | Mid Latitudes (wine)
+- group: m. Grapes and Berries
+  crop: Hops
+  init: 25.0
+  dev: 40.0
+  mid: 80.0
+  late: 10.0
+  total: 155.0
+  planting: April
+  region: Idaho, USA
+  raw: 25 | 40 | 80 | 10 | 155 | April | Idaho, USA
+- group: n. Fruit Trees
+  crop: Citrus
+  init: 60.0
+  dev: 90.0
+  mid: 120.0
+  late: 95.0
+  total: 365.0
+  planting: Jan
+  region: Mediterranean
+  raw: 60 | 90 | 120 | 95 | 365 | Jan | Mediterranean
+- group: n. Fruit Trees
+  crop: Deciduous Orchard
+  init: 20.0
+  dev: 70.0
+  mid: 90.0
+  late: 30.0
+  total: 210.0
+  planting: March
+  region: High Latitudes
+  raw: 20 | 70 | 90 | 30 | 210 | March | High Latitudes
+- group: n. Fruit Trees
+  crop: Deciduous Orchard
+  init: 20.0
+  dev: 70.0
+  mid: 120.0
+  late: 60.0
+  total: 270.0
+  planting: March
+  region: Low Latitudes
+  raw: 20 | 70 | 120 | 60 | 270 | March | Low Latitudes
+- group: n. Fruit Trees
+  crop: Deciduous Orchard
+  init: 30.0
+  dev: 50.0
+  mid: 130.0
+  late: 30.0
+  total: 240.0
+  planting: March
+  region: Calif., USA
+  raw: 30 | 50 | 130 | 30 | 240 | March | Calif., USA
+- group: n. Fruit Trees
+  crop: Olives
+  init: 30.0
+  dev: 90.0
+  mid: 60.0
+  late: 90.0
+  total: 2705.0
+  planting: March
+  region: Mediterranean
+  raw: 30 | 90 | 60 | 90 | 2705 | March | Mediterranean
+- group: n. Fruit Trees
+  crop: Pistachios
+  init: 20.0
+  dev: 60.0
+  mid: 30.0
+  late: 40.0
+  total: 150.0
+  planting: Feb
+  region: Mediterranean
+  raw: 20 | 60 | 30 | 40 | 150 | Feb | Mediterranean
+- group: n. Fruit Trees
+  crop: Walnuts
+  init: 20.0
+  dev: 10.0
+  mid: 130.0
+  late: 30.0
+  total: 190.0
+  planting: April
+  region: Utah, USA
+  raw: 20 | 10 | 130 | 30 | 190 | April | Utah, USA
+- group: o. Wetlands - Temperate Climate
+  crop: Wetlands (Cattails, Bulrush)
+  init: 10.0
+  dev: 30.0
+  mid: 80.0
+  late: 20.0
+  total: 140.0
+  planting: May
+  region: Utah, USA; killing frost
+  raw: 10 | 30 | 80 | 20 | 140 | May | Utah, USA; killing frost
+- group: o. Wetlands - Temperate Climate
+  crop: Wetlands (Cattails, Bulrush)
+  init: 180.0
+  dev: 60.0
+  mid: 90.0
+  late: 35.0
+  total: 365.0
+  planting: November
+  region: Florida, USA
+  raw: 180 | 60 | 90 | 35 | 365 | November | Florida, USA
+- group: o. Wetlands - Temperate Climate
+  crop: Wetlands (short veg.)
+  init: 180.0
+  dev: 60.0
+  mid: 90.0
+  late: 35.0
+  total: 365.0
+  planting: November
+  region: frost-free climate
+  raw: 180 | 60 | 90 | 35 | 365 | November | frost-free climate
